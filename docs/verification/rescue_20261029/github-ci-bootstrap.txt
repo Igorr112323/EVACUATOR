@@ -1,0 +1,8 @@
+GitHub Linux CI bootstrap attempt (not a runtime test)
+URL: https://github.com/Igorr112323/EVACUATOR/actions/runs/40832806836
+Trigger commit: 6c4ca159d88b9c9941d0f272f2813f43edfea3d2
+{"conclusion":"failure","head_sha":"6c4ca159d88b9c9941d0f272f2813f43edfea3d2","status":"completed"}
+jobs=0
+GitHub validation message: (Line: 24, Col: 23): Unrecognized named-value: 'runner'. Located at position 1 within expression: runner.temp
+Cause: runner context was used at job-level env. Moved the setting into the runner shell step.
+No SDK install, build, test, CLI, or TRX occurred in this failed run.

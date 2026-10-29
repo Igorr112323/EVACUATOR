@@ -21,7 +21,6 @@ jobs:
     env:
       DOTNET_CLI_TELEMETRY_OPTOUT: '1'
       DOTNET_NOLOGO: '1'
-      NUGET_PACKAGES: ${{ runner.temp }}/evacuator-nuget-packages
     steps:
       - name: Checkout the triggering commit
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
@@ -58,6 +57,7 @@ jobs:
         env:
           EVAC_SOURCE_COMMIT: ${{ steps.source.outputs.commit }}
         run: |
+          export NUGET_PACKAGES="$RUNNER_TEMP/evacuator-nuget-packages"
           bash tools/verify-dotnet-linux.sh "$RUNNER_TEMP/evacuator-source" "$RUNNER_TEMP/evacuator-evidence"
 
       - name: Upload raw logs, TRX, and CLI artifacts
