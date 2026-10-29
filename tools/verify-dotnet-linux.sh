@@ -52,6 +52,22 @@ if [ -f src/Evakuator.CliDemo/bin/Release/net10.0/Evakuator.CliDemo.dll ]; then
   else
     printf 'cli-negative-message=PASS\n' >> "$out/statuses.txt"
   fi
+  capture cli-malformed-prepare 0 python3 - samples/reference_clean_plan.json "$out/malformed-plan.json" <<'PY'
+import json
+import sys
+with open(sys.argv[1], encoding='utf-8') as f:
+    plan = json.load(f)
+del plan['signs'][0]['insertionPoint']['y']
+with open(sys.argv[2], 'w', encoding='utf-8') as f:
+    json.dump(plan, f, ensure_ascii=False, indent=2)
+PY
+  capture cli-malformed 1 dotnet run --project src/Evakuator.CliDemo -c Release --no-restore --no-build -- --norms norms/gost_12_4_026_2015.json --plan "$out/malformed-plan.json" --output-dir "$out/cli-invalid-output"
+  if ! grep -q 'Ошибка демонстрации:' "$out/cli-malformed.log" || [ -e "$out/cli-invalid-output" ]; then
+    printf 'cli-malformed-check=FAIL (diagnostic missing or output was created)\n' >> "$out/statuses.txt"
+    status=1
+  else
+    printf 'cli-malformed-check=PASS\n' >> "$out/statuses.txt"
+  fi
   if [ -f "$out/cli-first/demo_after_plan.json" ]; then
     capture cli-second 0 dotnet run --project src/Evakuator.CliDemo -c Release --no-restore --no-build -- --norms norms/gost_12_4_026_2015.json --plan "$out/cli-first/demo_after_plan.json" --output-dir "$out/cli-second"
     capture cli-artifact-check 0 python3 - "$out" <<'PY'
@@ -88,6 +104,45 @@ PY
 else
   printf 'cli-positive=BLOCKED (Release CLI binary missing)\ncli-negative=BLOCKED\ncli-second=BLOCKED\ncli-artifact-check=BLOCKED\n' >> "$out/statuses.txt"
   status=1
+fi
+
+catalog_project=tools/Evakuator.SignCatalog/Evakuator.SignCatalog.csproj
+if [ -f "$catalog_project" ]; then
+  capture catalog-restore 0 dotnet restore "$catalog_project" --source https://api.nuget.org/v3/index.json
+  capture catalog-build 0 dotnet build "$catalog_project" -c Release --no-restore
+  if [ -f tools/Evakuator.SignCatalog/bin/Release/net10.0/Evakuator.SignCatalog.dll ]; then
+    capture catalog-generate 0 dotnet run --project "$catalog_project" -c Release --no-restore --no-build -- norms/gost_12_4_026_2015.json "$out/sign_catalog.svg"
+    capture catalog-check 0 python3 - "$out/sign_catalog.svg" norms/gost_12_4_026_2015.json <<'PY'
+import hashlib
+import json
+import sys
+import xml.etree.ElementTree as ET
+from pathlib import Path
+
+path = Path(sys.argv[1])
+with open(sys.argv[2], encoding='utf-8') as f:
+    signs = json.load(f)['signs']
+root = ET.parse(path).getroot()
+namespace = '{http://www.w3.org/2000/svg}'
+if root.tag != namespace + 'svg' or len(signs) != 30:
+    raise ValueError('Expected SVG with the 30-sign demo database')
+texts = [''.join(element.itertext()) for element in root.iter(namespace + 'text')]
+for sign in signs:
+    if texts.count(sign['code']) != 1 or '[ПРОВЕРИТЬ ПО ТЕКСТУ ГОСТ]' not in sign['gostClauseRef']:
+        raise ValueError('Missing catalog code or verification marker: ' + sign['code'])
+if not any('[ПРОВЕРИТЬ ПО ТЕКСТУ ГОСТ]' in text for text in texts):
+    raise ValueError('Missing visible warning')
+if any(element.tag in (namespace + 'image', namespace + 'script') for element in root.iter()):
+    raise ValueError('Unexpected image or script')
+print('PASS: 30 labelled vector entries and visible demo/ГОСТ warning')
+print('sha256=' + hashlib.sha256(path.read_bytes()).hexdigest())
+PY
+  else
+    printf 'catalog-generate=BLOCKED (catalog executable missing)\ncatalog-check=BLOCKED\n' >> "$out/statuses.txt"
+    status=1
+  fi
+else
+  printf 'catalog=NOT_PRESENT_IN_THIS_SNAPSHOT\n' >> "$out/statuses.txt"
 fi
 
 printf '%s\n' "$status" > "$out/overall-exit.txt"
