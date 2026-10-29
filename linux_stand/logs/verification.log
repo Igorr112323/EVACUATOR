@@ -1,0 +1,13 @@
+$ /tmp/evacuator-linux-stand-clean-venv/bin/python -m linux_stand.verify_artifacts --dxf linux_stand/artifacts/hello_e01_01.dxf --png linux_stand/artifacts/hello_e01_01.png
+DXF: linux_stand/artifacts/hello_e01_01.dxf
+PNG: linux_stand/artifacts/hello_e01_01.png
+Golden spec: /home/user/EVACUATOR/linux_stand/spec/hello_e01_01_h10.json
+PASS raw ASCII entity scan: model={'INSERT': 1}; block={'SOLID': 36, 'LWPOLYLINE': 7, 'CIRCLE': 1, 'LINE': 1, 'TEXT': 1}
+PASS dxfgrabber 1.0.1: DXF AC1024, INSUNITS=4 (mm), one model INSERT at (0.0, 0.0, 0.0), scale=(10.0, 10.0, 1.0), rotation=0°
+PASS block: 46 primitives, types={'SOLID': 36, 'LWPOLYLINE': 7, 'CIRCLE': 1, 'LINE': 1, 'TEXT': 1}, layers={'EVAC_BACKGROUND': 1, 'EVAC_PICTOGRAM': 43, 'EVAC_ANNOTATION': 2}
+PASS carrier: green #008855, local vertices 0..1, model bounds [0.0, 0.0, 10.0, 10.0] mm
+PASS pictogram: all seven polyline vertex sequences, widths, closure and true color
+PASS filled geometry: exact CIRCLE center/radius, 32 head triangles and 3 body triangles with every vertex checked
+PASS annotation: LINE endpoints; TEXT='E01-01', local height=0.1
+PASS PNG: 780x775, green=197232, white inside carrier bbox=100804, dark below=4266; green bbox=(117, 51)..(662, 596)
+PASS independent artifact verification; this is not GOST or nanoCAD validation.

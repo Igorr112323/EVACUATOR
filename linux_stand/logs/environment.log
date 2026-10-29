@@ -1,0 +1,21 @@
+$ uname -a
+Linux e2b.local 6.1.158+ #1 SMP PREEMPT_DYNAMIC Mon May 11 18:48:24 UTC 2026 x86_64 GNU/Linux
+[exit=0]
+
+$ command -v dotnet
+[exit=1]
+
+$ command -v python3
+/usr/bin/python3
+[exit=0]
+
+$ python3 --version
+Python 3.11.2
+[exit=0]
+
+$ python3 -m pip list --disable-pip-version-check | grep -i ezdxf
+[exit=1] (system Python has no matching package)
+
+$ /tmp/evacuator-linux-stand-clean-venv/bin/python --version
+Python 3.11.2
+[exit=0]

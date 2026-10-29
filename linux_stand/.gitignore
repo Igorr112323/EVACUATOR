@@ -1,0 +1,12 @@
+# Local Python environments and generated caches are not deliverables.
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# The repository ignores artifacts/ globally. Make the two demo deliverables
+# eligible for version control while ignoring other generated artifacts.
+!artifacts/
+/artifacts/*
+!/artifacts/hello_e01_01.dxf
+!/artifacts/hello_e01_01.png

@@ -1,0 +1,16 @@
+$ PYTHONUNBUFFERED=1 MPLCONFIGDIR=/tmp/evacuator-matplotlib /tmp/evacuator-linux-stand-clean-venv/bin/python -m linux_stand demo --height 7 --output-dir /tmp/evacuator-r01-negative-7
+Linux DXF stand — DEMO ONLY; not nanoCAD, not a GOST verification
+[ПРОВЕРИТЬ ПО ТЕКСТУ ГОСТ]: demo catalog E01-01, limits 8..15 mm on paper
+R01 demo: FAIL; paper height=7 mm, scale=1:1
+No DXF or PNG written: R01 failed (use --allow-invalid only for a negative demo).
+[exit=2; expected=2]
+PASS: no output directory was created
+
+$ PYTHONUNBUFFERED=1 MPLCONFIGDIR=/tmp/evacuator-matplotlib /tmp/evacuator-linux-stand-clean-venv/bin/python -m linux_stand demo --height 16 --output-dir /tmp/evacuator-r01-negative-16
+Linux DXF stand — DEMO ONLY; not nanoCAD, not a GOST verification
+[ПРОВЕРИТЬ ПО ТЕКСТУ ГОСТ]: demo catalog E01-01, limits 8..15 mm on paper
+R01 demo: FAIL; paper height=16 mm, scale=1:1
+No DXF or PNG written: R01 failed (use --allow-invalid only for a negative demo).
+[exit=2; expected=2]
+PASS: no output directory was created
+

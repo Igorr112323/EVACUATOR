@@ -1,0 +1,5 @@
+# Direct dependencies for the week-one stand; no nanoCAD SDK.
+ezdxf==1.4.5
+dxfgrabber==1.0.1
+matplotlib==3.10.9
+pytest==8.4.2

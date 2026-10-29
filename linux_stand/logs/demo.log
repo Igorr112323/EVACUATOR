@@ -1,0 +1,9 @@
+$ MPLCONFIGDIR=/tmp/evacuator-matplotlib /tmp/evacuator-linux-stand-clean-venv/bin/python -m linux_stand demo --output-dir linux_stand/artifacts
+Linux DXF stand — DEMO ONLY; not nanoCAD, not a GOST verification
+[ПРОВЕРИТЬ ПО ТЕКСТУ ГОСТ]: demo catalog E01-01, limits 8..15 mm on paper
+R01 demo: PASS; paper height=10 mm, scale=1:1
+Sign: code=E01-01; model height=10 mm; insertion=(0, 0); rotation=0°
+Carrier AABB (model mm, excluding caption): [0, 0] .. [10, 10]
+DXF: linux_stand/artifacts/hello_e01_01.dxf
+PNG: linux_stand/artifacts/hello_e01_01.png
+The DXF is a scaled ordinary BLOCK/INSERT, not a nanoCAD custom/smart object.

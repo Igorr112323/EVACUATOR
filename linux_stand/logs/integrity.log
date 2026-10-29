@@ -1,0 +1,8 @@
+$ command -v file
+[exit=1] utility not installed; using Python readers instead
+
+$ /tmp/evacuator-linux-stand-clean-venv/bin/python (independent DXF and PNG format inspection)
+DXF linux_stand/artifacts/hello_e01_01.dxf: AC1024; model entities=1
+PNG linux_stand/artifacts/hello_e01_01.png: PNG; 780x775; mode=RGBA
+PASS: both files opened; Pillow PNG structural verification passed
+[exit=0]

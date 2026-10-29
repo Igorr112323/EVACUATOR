@@ -1,0 +1,32 @@
+{
+  "purpose": "Hand-transcribed golden expectations for the single 1:1 demo; not an official GOST specification.",
+  "dxf_version": "AC1024",
+  "insunits": 4,
+  "model_counts": {"INSERT": 1},
+  "block_name": "EVAC_E01_01",
+  "block_counts": {"SOLID": 36, "LWPOLYLINE": 7, "CIRCLE": 1, "LINE": 1, "TEXT": 1},
+  "layer_counts": {"EVAC_BACKGROUND": 1, "EVAC_PICTOGRAM": 43, "EVAC_ANNOTATION": 2},
+  "layer_aci": {"EVAC_BACKGROUND": 3, "EVAC_PICTOGRAM": 7, "EVAC_ANNOTATION": 7},
+  "insert": {"layer": "EVAC_BACKGROUND", "position": [0, 0, 0], "scale": [10, 10, 1], "rotation": 0},
+  "background": {"true_color": 34901, "vertices": [[0, 0, 0], [1, 0, 0], [0, 1, 0], [1, 1, 0]], "world_bounds": [0, 0, 10, 10]},
+  "foreground_true_color": 16777215,
+  "annotation_true_color": 1710618,
+  "polylines": [
+    {"closed": true, "width": 0.035, "points": [[0.045, 0.045], [0.955, 0.045], [0.955, 0.955], [0.045, 0.955]]},
+    {"closed": false, "width": 0.045, "points": [[0.83, 0.15], [0.83, 0.84], [0.22, 0.84], [0.22, 0.15]]},
+    {"closed": false, "width": 0.035, "points": [[0.75, 0.18], [0.75, 0.78], [0.63, 0.78]]},
+    {"closed": false, "width": 0.055, "points": [[0.57, 0.56], [0.68, 0.48], [0.77, 0.51]]},
+    {"closed": false, "width": 0.055, "points": [[0.48, 0.58], [0.39, 0.52], [0.32, 0.56]]},
+    {"closed": false, "width": 0.065, "points": [[0.53, 0.45], [0.63, 0.31], [0.72, 0.25]]},
+    {"closed": false, "width": 0.065, "points": [[0.5, 0.45], [0.41, 0.34], [0.3, 0.3]]}
+  ],
+  "head": {"center": [0.54, 0.73, 0], "radius": 0.065, "triangles": 32},
+  "body_triangles": [
+    [[0.59, 0.64, 0], [0.48, 0.6, 0], [0.43, 0.49, 0]],
+    [[0.59, 0.64, 0], [0.43, 0.49, 0], [0.52, 0.44, 0]],
+    [[0.59, 0.64, 0], [0.52, 0.44, 0], [0.61, 0.53, 0]]
+  ],
+  "line": {"start": [0, -0.08, 0], "end": [1, -0.08, 0]},
+  "text": {"value": "E01-01", "position": [0, -0.23, 0], "height": 0.1, "rotation": 0},
+  "png": {"min_width": 500, "min_height": 500, "minimum_green_pixels": 50000, "minimum_white_pixels_inside_carrier_bbox": 10000, "minimum_dark_pixels_below_carrier": 500}
+}
