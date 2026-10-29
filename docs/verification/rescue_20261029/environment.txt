@@ -1,0 +1,24 @@
+RESCUE-AND-VERIFY-01 environment
+2026-10-29T06:58:24Z
+System: Linux e2b.local 6.1.158+ #1 SMP PREEMPT_DYNAMIC Mon May 11 18:48:24 UTC 2026 x86_64 GNU/Linux
+PRETTY_NAME="Debian GNU/Linux 12 (bookworm)"
+NAME="Debian GNU/Linux"
+VERSION_ID="12"
+VERSION="12 (bookworm)"
+VERSION_CODENAME=bookworm
+ID=debian
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"
+
+Branch: arena/9335e807-evacuator
+Preservation HEAD: d07566376b333d9dd107bb5bb0f7065fdb087a7d
+Original HEAD: 9bd03ab9753877b75f5598da0b1315252f7ab7eb
+Baseline code: unchanged since preservation HEAD.
+SDK pin: {   "sdk": {     "version": "10.0.100",     "rollForward": "latestFeature"   } }
+dotnet: NOT FOUND
+csc: NOT FOUND
+mcs: NOT FOUND
+mono: NOT FOUND
+msbuild: NOT FOUND
+Official NuGet cache: absent

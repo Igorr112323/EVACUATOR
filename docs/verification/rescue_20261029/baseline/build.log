@@ -1,0 +1,3 @@
+$ dotnet build Evakuator.sln -c Release --no-restore
+environment: line 61: dotnet: command not found
+exit=127

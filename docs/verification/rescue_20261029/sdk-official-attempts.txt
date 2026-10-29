@@ -1,0 +1,24 @@
+Official SDK installation attempts; UTC 2026-10-29T06:58:25Z
+
+$ curl -fL --max-time 20 https://dot.net/v1/dotnet-install.sh -o /home/user/evacuator-official-dotnet-install.sh
+curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to dot.net:443
+exit=35
+Installer not executed because the official script could not be downloaded.
+
+$ curl -fL --range 0-0 --max-time 20 https://builds.dotnet.microsoft.com/dotnet/Sdk/10.0.400/dotnet-sdk-10.0.400-linux-x64.tar.gz -o /dev/null
+curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to builds.dotnet.microsoft.com:443
+exit=35
+
+$ curl -fL --max-time 20 https://api.nuget.org/v3/index.json -o /dev/null
+curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to api.nuget.org:443
+exit=35
+
+$ gh api repos/dotnet/sdk/releases/tags/v10.0.400 (asset count)
+v10.0.400	0	https://github.com/dotnet/sdk/releases/tag/v10.0.400
+exit=0
+
+$ gh api repos/dotnet/core/contents/release-notes/10.0/10.0.11/release.json (official binary metadata)
+release: 10.0.11
+sdk: 10.0.400
+name=dotnet-sdk-linux-x64.tar.gz url=https://builds.dotnet.microsoft.com/dotnet/Sdk/10.0.400/dotnet-sdk-10.0.400-linux-x64.tar.gz sha512=1033977dd837150e0814cf0c5d5b17ceb63925fda7ba2158b47258a4bd7c048cf82eac3bc1166f3146f53124a3f5fba09db1de1260d2ce96399860303b404b48
+exit=0

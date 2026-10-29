@@ -1,0 +1,4 @@
+Initial staging check exited 2 due to trailing whitespace in newly created logging prefixes and curl output.
+Exact pre-normalization logs were retained in local-raw-logs.tar.gz; readable copies strip only trailing spaces and tabs.
+01b932a9ce851db921cc87cce0992d8e9f5d21fbf6d98538bdfaa6c61a7d5afd  docs/verification/rescue_20261029/local-raw-logs.tar.gz
+No historical log was modified.

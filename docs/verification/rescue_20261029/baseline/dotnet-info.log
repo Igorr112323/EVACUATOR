@@ -1,0 +1,3 @@
+$ dotnet --info
+environment: line 61: dotnet: command not found
+exit=127

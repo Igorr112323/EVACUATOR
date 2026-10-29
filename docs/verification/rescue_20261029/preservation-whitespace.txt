@@ -1,0 +1,3 @@
+linux_stand/logs/r01-negative.log:16: new blank line at EOF.
+group 3 default git diff --cached --check exit=2
+The historical log is preserved byte-for-byte; no whitespace is silently changed.

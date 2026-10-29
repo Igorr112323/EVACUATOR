@@ -1,0 +1,18 @@
+Emergency archive, created before repository changes:
+/home/user/EVACUATOR-rescue-20261029T0654Z.tar.gz | 470924 bytes
+d1854ba1d6eaf8982db2b79d659dfd2d19584ed38c158b0567b0581d0f015a62  /home/user/EVACUATOR-rescue-20261029T0654Z.tar.gz
+gzip -t exit=0
+tar -tzf exit=0
+At creation: 243 tar entries, 180 regular files compared byte-for-byte (SHA-256) with the original working tree including .git; 0 mismatches and 0 missing paths.
+At creation: high-confidence secret/filename pattern matches: 0. A heuristic scan cannot prove absence of sensitive data.
+
+Preservation commits (staged blobs verified against the archive):
+97a57081e84e36117a662eda862029f8f652e49c preserve: capture C# solution and sample data
+a3e63a4427bd3e4b5b1ac58fa39f7c47aeb431c5 preserve: capture documentation demos and packaging
+f92eb9efea2d5ed0331d443a87fa4f8cbfa73292 preserve: capture independent Linux Python stand
+d07566376b333d9dd107bb5bb0f7065fdb087a7d preserve: capture historical diagnostic evidence
+Each group was staged via named paths and checked with git diff --cached --check.
+Group 3 check exited 2 for preserved linux_stand/logs/r01-negative.log:16 (blank line at EOF); see preservation-whitespace.txt. Other groups exited 0.
+
+Remote preservation branch after push:
+d07566376b333d9dd107bb5bb0f7065fdb087a7d	refs/heads/arena/9335e807-evacuator

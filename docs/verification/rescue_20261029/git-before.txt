@@ -1,0 +1,182 @@
+RESCUE R0 state, 2026-10-29T06:54:36Z
+
+$ git status --short --branch
+## arena/9335e807-evacuator
+ M README.md
+?? .gitignore
+?? CURATOR_REPORT.md
+?? Directory.Build.props
+?? Evakuator.sln
+?? PRODUCT_BLOCKERS.md
+?? docs/
+?? global.json
+?? linux_stand/
+?? norms/
+?? packaging/
+?? samples/
+?? src/
+?? tests/
+?? tools/
+[exit=0]
+
+$ git rev-parse HEAD
+9bd03ab9753877b75f5598da0b1315252f7ab7eb
+[exit=0]
+
+$ git diff --name-status
+M	README.md
+[exit=0]
+
+$ git diff --cached --name-status
+[exit=0]
+
+$ git ls-files --others --exclude-standard
+.gitignore
+CURATOR_REPORT.md
+Directory.Build.props
+Evakuator.sln
+PRODUCT_BLOCKERS.md
+docs/ADR-001-Clean-Architecture-and-SDK-Isolation.md
+docs/ADR-002-Parametric-Sign-Vector-DSL.md
+docs/ADR-003-Norm-Control-Rule-Engine.md
+docs/GOST_VERIFICATION_CHECKLIST.md
+docs/NANOCAD_SDK_INTEGRATION_GUIDE.md
+docs/demo/demo_after.svg
+docs/demo/demo_before.svg
+docs/demo/legend_table.svg
+docs/demo/ui-after.png
+docs/demo/ui-before.png
+docs/verification/EVIDENCE_INDEX.md
+docs/verification/NANOCAD26_RESEARCH.md
+docs/verification/baseline/CURATOR_REPORT_previous.md
+docs/verification/baseline/dotnet-attempts.txt
+docs/verification/baseline/environment.txt
+docs/verification/baseline/git-diff-check.txt
+docs/verification/baseline/git-initial.txt
+docs/verification/baseline/git-objects.txt
+docs/verification/baseline/preexisting-sha256.txt
+docs/verification/baseline/preservation-hashes.txt
+docs/verification/baseline/static-audit.py
+docs/verification/baseline/static-audit.txt
+docs/verification/product_recheck_20261028/REPORT.md
+docs/verification/product_recheck_20261028/baseline-attempts.txt
+docs/verification/product_recheck_20261028/environment.txt
+docs/verification/product_recheck_20261028/git-before.txt
+docs/verification/product_recheck_20261028/git-staging-check.txt
+docs/verification/product_recheck_20261028/source-files-check.txt
+docs/verification/product_recheck_20261028/source-files.sha256
+docs/verification/product_recheck_20261028/static-audit.txt
+global.json
+linux_stand/.gitignore
+linux_stand/FULL_LOGS.md
+linux_stand/README.md
+linux_stand/REPORT.md
+linux_stand/__init__.py
+linux_stand/__main__.py
+linux_stand/artifacts/hello_e01_01.dxf
+linux_stand/artifacts/hello_e01_01.png
+linux_stand/cad_backend.py
+linux_stand/core/__init__.py
+linux_stand/core/catalog.py
+linux_stand/core/geometry.py
+linux_stand/core/normcontrol.py
+linux_stand/core/primitives.py
+linux_stand/dxf_backend.py
+linux_stand/export.py
+linux_stand/logs/SHA256SUMS.txt
+linux_stand/logs/demo.log
+linux_stand/logs/environment.log
+linux_stand/logs/install.log
+linux_stand/logs/integrity.log
+linux_stand/logs/pytest.log
+linux_stand/logs/r01-negative.log
+linux_stand/logs/verification.log
+linux_stand/renderer.py
+linux_stand/requirements-lock.txt
+linux_stand/requirements.txt
+linux_stand/spec/hello_e01_01_h10.json
+linux_stand/tests/conftest.py
+linux_stand/tests/test_artifacts.py
+linux_stand/tests/test_backend.py
+linux_stand/tests/test_core.py
+linux_stand/tests/test_normcontrol.py
+linux_stand/verify_artifacts.py
+norms/gost_12_4_026_2015.json
+norms/gost_12_4_026_2015.schema.json
+norms/sample_custom_amendment.json
+packaging/README.md
+packaging/evakuator.package.template
+packaging/ribbon.template.xml
+samples/bad_bazaar_plan.json
+samples/reference_clean_plan.json
+src/Evakuator.CadAdapter/Commands/EvacCommands.cs
+src/Evakuator.CadAdapter/Contracts/ICadDocumentContext.cs
+src/Evakuator.CadAdapter/Contracts/ICadServices.cs
+src/Evakuator.CadAdapter/CustomObjects/EvacCustomObjects.cs
+src/Evakuator.CadAdapter/Evakuator.CadAdapter.csproj
+src/Evakuator.CadAdapter/NanoCad/SdkGate.cs
+src/Evakuator.CadAdapter/Simulation/InMemoryCadDocumentContext.cs
+src/Evakuator.CadAdapter/Simulation/InMemoryCadServices.cs
+src/Evakuator.CliDemo/Evakuator.CliDemo.csproj
+src/Evakuator.CliDemo/Program.cs
+src/Evakuator.Domain/Entities/EvacuationPlan.cs
+src/Evakuator.Domain/Enums/PlanEnums.cs
+src/Evakuator.Domain/Evakuator.Domain.csproj
+src/Evakuator.Domain/Geometry/VectorPrimitive.cs
+src/Evakuator.Domain/Serialization/PlanJson.cs
+src/Evakuator.Domain/Serialization/PlanJsonShapeValidator.cs
+src/Evakuator.Domain/ValueObjects/GeometryValues.cs
+src/Evakuator.Domain/ValueObjects/SignCode.cs
+src/Evakuator.Geometry/Evakuator.Geometry.csproj
+src/Evakuator.Geometry/FrameLayoutEngine.cs
+src/Evakuator.Geometry/LegendLayoutEngine.cs
+src/Evakuator.Geometry/PathGeometryGenerator.cs
+src/Evakuator.Geometry/PolylineMath.cs
+src/Evakuator.Geometry/SignGeometryGenerator.cs
+src/Evakuator.Geometry/SvgPreviewExporter.cs
+src/Evakuator.Norms/Evakuator.Norms.csproj
+src/Evakuator.Norms/Exceptions/NormDatabaseValidationException.cs
+src/Evakuator.Norms/Models/NormDatabaseDto.cs
+src/Evakuator.Norms/Services/HotReloadNormWatcher.cs
+src/Evakuator.Norms/Services/JsonNormRepository.cs
+src/Evakuator.Norms/Services/NormDatabaseValidator.cs
+src/Evakuator.Norms/Services/NormJsonShapeValidator.cs
+src/Evakuator.UI/App.axaml
+src/Evakuator.UI/App.axaml.cs
+src/Evakuator.UI/Controls/PlanCanvas.cs
+src/Evakuator.UI/Controls/VectorDrawing.cs
+src/Evakuator.UI/Controls/VectorPreview.cs
+src/Evakuator.UI/Evakuator.UI.csproj
+src/Evakuator.UI/MainWindow.axaml
+src/Evakuator.UI/MainWindow.axaml.cs
+src/Evakuator.UI/Program.cs
+src/Evakuator.UI/ViewModels/LegendPreviewViewModel.cs
+src/Evakuator.UI/ViewModels/MainPaletteViewModel.cs
+src/Evakuator.UI/ViewModels/NormInspectorViewModel.cs
+src/Evakuator.UI/ViewModels/ObservableObject.cs
+src/Evakuator.UI/ViewModels/SignCatalogViewModel.cs
+src/Evakuator.Validation/Abstractions/ValidationModels.cs
+src/Evakuator.Validation/Engine/NormAutoFixer.cs
+src/Evakuator.Validation/Engine/NormController.cs
+src/Evakuator.Validation/Evakuator.Validation.csproj
+src/Evakuator.Validation/Rules/R01_SignSizeBoundsRule.cs
+src/Evakuator.Validation/Rules/R02_UniformSignScaleRule.cs
+src/Evakuator.Validation/Rules/R03_EvacuationPathIntegrityRule.cs
+src/Evakuator.Validation/Rules/R04_YouAreHerePresenceRule.cs
+src/Evakuator.Validation/Rules/R05_LegendSyncRule.cs
+src/Evakuator.Validation/Rules/R06_SignCollisionAndOverlapRule.cs
+src/Evakuator.Validation/Rules/R07_MandatoryTextAndHeaderRule.cs
+tests/Evakuator.Tests/AutoFixTests.cs
+tests/Evakuator.Tests/CadAdapterTests.cs
+tests/Evakuator.Tests/DemoScenarioTests.cs
+tests/Evakuator.Tests/DomainTests.cs
+tests/Evakuator.Tests/Evakuator.Tests.csproj
+tests/Evakuator.Tests/GeometryTests.cs
+tests/Evakuator.Tests/NormRobustnessTests.cs
+tests/Evakuator.Tests/NormsTests.cs
+tests/Evakuator.Tests/RuleTests.cs
+tests/Evakuator.Tests/TestData.cs
+tests/Evakuator.Tests/UiViewModelTests.cs
+tools/create_mvp_norms.py
+tools/sdk-preflight.ps1
+[exit=0]
