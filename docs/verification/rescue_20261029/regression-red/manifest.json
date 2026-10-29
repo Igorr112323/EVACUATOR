@@ -1,0 +1,21 @@
+{
+  "repository": "Igorr112323/EVACUATOR",
+  "run_id": 40833496530,
+  "run_url": "https://github.com/Igorr112323/EVACUATOR/actions/runs/40833496530",
+  "head_sha": "ef8f3ab29f4493a683650965ed4bb345876313e6",
+  "conclusion": "failure",
+  "jobs": {
+    "baseline": {
+      "job_id": 123312816272,
+      "conclusion": "success",
+      "parts": 21,
+      "archive_sha256": "b54cf2112d24aa630bfb9d03da2fd0dbedbc3aa70ed4e60ad35b5b28dd2e3b52"
+    },
+    "current": {
+      "job_id": 123312816484,
+      "conclusion": "failure",
+      "parts": 22,
+      "archive_sha256": "5d78fd1fd36f2e66c8465ad7a894f289402dacb4535f05c38d94f99cfc6b8d28"
+    }
+  }
+}

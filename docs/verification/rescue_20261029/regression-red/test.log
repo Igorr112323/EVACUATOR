@@ -1,0 +1,41 @@
+$ dotnet test tests/Evakuator.Tests/Evakuator.Tests.csproj -c Release --no-restore --no-build --logger trx\;LogFileName=results.trx --results-directory /home/runner/work/_temp/evacuator-evidence/trx
+Test run for /home/runner/work/_temp/evacuator-source/tests/Evakuator.Tests/bin/Release/net10.0/Evakuator.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+[xUnit.net 00:00:01.15]     Evakuator.Tests.PortableAuditRegressionTests.R01FractionalBoundsMessagesAreIndependentOfCurrentCulture [FAIL]
+[xUnit.net 00:00:01.16]     Evakuator.Tests.PortableAuditRegressionTests.AdjacentRetracingIsReportedWithoutTreatingOrdinaryCornersAsIntersections [FAIL]
+  Failed Evakuator.Tests.PortableAuditRegressionTests.R01FractionalBoundsMessagesAreIndependentOfCurrentCulture [74 ms]
+  Error Message:
+   Assert.Equal() Failure: Strings differ
+                                          ↓ (pos 30)
+Expected: ···"4: 5 мм на листе; диапазон 8.25–15.75 мм."
+Actual:   ···"4: 5 мм на листе; диапазон 8,25–15,75 мм."
+                                          ↑ (pos 30)
+  Stack Trace:
+     at Evakuator.Tests.PortableAuditRegressionTests.R01FractionalBoundsMessagesAreIndependentOfCurrentCulture() in /home/runner/work/_temp/evacuator-source/tests/Evakuator.Tests/PortableAuditRegressionTests.cs:line 49
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed Evakuator.Tests.PortableAuditRegressionTests.AdjacentRetracingIsReportedWithoutTreatingOrdinaryCornersAsIntersections [< 1 ms]
+  Error Message:
+   Assert.True() Failure
+Expected: True
+Actual:   False
+  Stack Trace:
+     at Evakuator.Tests.PortableAuditRegressionTests.AdjacentRetracingIsReportedWithoutTreatingOrdinaryCornersAsIntersections() in /home/runner/work/_temp/evacuator-source/tests/Evakuator.Tests/PortableAuditRegressionTests.cs:line 17
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+[xUnit.net 00:00:01.17]     Evakuator.Tests.PortableAuditRegressionTests.R06OverlapMessagesAreIndependentOfCurrentCulture [FAIL]
+  Failed Evakuator.Tests.PortableAuditRegressionTests.R06OverlapMessagesAreIndependentOfCurrentCulture [17 ms]
+  Error Message:
+   Assert.Equal() Failure: Strings differ
+                                     ↓ (pos 35)
+Expected: ···"F10 перекрываются на 20% меньшей площади."
+Actual:   ···"10 перекрываются на 20 % меньшей площади."
+                                    ↑ (pos 35)
+  Stack Trace:
+     at Evakuator.Tests.PortableAuditRegressionTests.R06OverlapMessagesAreIndependentOfCurrentCulture() in /home/runner/work/_temp/evacuator-source/tests/Evakuator.Tests/PortableAuditRegressionTests.cs:line 70
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+Results File: /home/runner/work/_temp/evacuator-evidence/trx/results.trx
+
+Failed!  - Failed:     3, Passed:   134, Skipped:     0, Total:   137, Duration: 822 ms - Evakuator.Tests.dll (net10.0)
+exit=1
