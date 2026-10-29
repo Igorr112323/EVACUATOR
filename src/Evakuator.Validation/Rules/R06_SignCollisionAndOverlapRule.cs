@@ -1,3 +1,4 @@
+using System.Globalization;
 using Evakuator.Domain.Entities;
 using Evakuator.Domain.ValueObjects;
 using Evakuator.Geometry;
@@ -31,7 +32,7 @@ public sealed class R06_SignCollisionAndOverlapRule : INormRule
                 var overlap = a.OverlapOfSmaller(generator.Bounds(other, database));
                 if (duplicate || overlap > database.Parameters.OverlapThreshold)
                     yield return new(Id, sign.Id, IssueSeverity.Error,
-                        duplicate ? $"Дублирующиеся знаки {sign.Code} в одной точке." : $"Знаки {sign.Code} и {other.Code} перекрываются на {overlap:P0} меньшей площади.",
+                        duplicate ? $"Дублирующиеся знаки {sign.Code} в одной точке." : $"Знаки {sign.Code} и {other.Code} перекрываются на {overlap.ToString("P0", CultureInfo.InvariantCulture)} меньшей площади.",
                         true, other.Id);
             }
         }
