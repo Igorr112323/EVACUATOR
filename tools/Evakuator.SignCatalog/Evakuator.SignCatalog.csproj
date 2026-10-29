@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../../src/Evakuator.Geometry/Evakuator.Geometry.csproj" />
+    <ProjectReference Include="../../src/Evakuator.Norms/Evakuator.Norms.csproj" />
+  </ItemGroup>
+</Project>
