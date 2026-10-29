@@ -1,0 +1,8 @@
+$ dotnet run --project src/Evakuator.CliDemo -c Release --no-restore --no-build -- --norms norms/gost_12_4_026_2015.json --plan /home/runner/work/_temp/evacuator-evidence/cli-first/demo_after_plan.json --output-dir /home/runner/work/_temp/evacuator-evidence/cli-second
+ЭВАКУАТОР — учебный сценарий. Не является проверкой соответствия ГОСТ.
+До: 100% правил, ошибок: 0; категории:
+После: 100% правил, ошибок: 0, предупреждений: 2.
+Изменений: 0; действий для специалиста: 2.
+Маршруты, положение маркера/знаков, тексты и нормы обязательно проверяет проектировщик.
+Артефакты: /home/runner/work/_temp/evacuator-evidence/cli-second
+exit=0

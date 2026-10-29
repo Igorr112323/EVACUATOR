@@ -1,0 +1,12 @@
+$ dotnet build tools/Evakuator.SignCatalog/Evakuator.SignCatalog.csproj -c Release --no-restore
+  Evakuator.Domain -> /home/runner/work/_temp/evacuator-source/src/Evakuator.Domain/bin/Release/net10.0/Evakuator.Domain.dll
+  Evakuator.Norms -> /home/runner/work/_temp/evacuator-source/src/Evakuator.Norms/bin/Release/net10.0/Evakuator.Norms.dll
+  Evakuator.Geometry -> /home/runner/work/_temp/evacuator-source/src/Evakuator.Geometry/bin/Release/net10.0/Evakuator.Geometry.dll
+  Evakuator.SignCatalog -> /home/runner/work/_temp/evacuator-source/tools/Evakuator.SignCatalog/bin/Release/net10.0/Evakuator.SignCatalog.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.30
+exit=0

@@ -1,0 +1,19 @@
+=== Recovery from remote clean clone ===
+UTC: 2026-10-29T07:23:32Z
+Clone source: https://github.com/Igorr112323/EVACUATOR.git, branch arena/9335e807-evacuator
+$ git rev-parse HEAD
+ef769be38073cb33b75b39c2649d8b1c2a20cae1
+$ git status --short --branch
+## arena/9335e807-evacuator...origin/arena/9335e807-evacuator
+clean working tree: PASS
+$ git fsck --full
+exit=0
+$ git ls-tree -r --name-only HEAD | wc -l
+262
+$ git archive HEAD --format=tar | tar -tf -
+322
+exit=0
+1512afeaabf5159606be509b6d72a20a66527fa5d3390aefcc693d45c849e5fc  /home/user/EVACUATOR-clean-recovery-ef769be/docs/verification/sign_catalog.svg
+4a246d5cc766cdc4292246a4b44501a8fbd5302c030a576933bb77211512bcd8  /home/user/EVACUATOR-clean-recovery-ef769be/docs/verification/rescue_20261029/github-baseline/trx/results.trx
+d2f5f2b06a6c15e1e1bc1544bcc95de58a86f122827f67915af32d0b29b3e72c  /home/user/EVACUATOR-clean-recovery-ef769be/docs/verification/rescue_20261029/github-final/trx/results.trx
+This evidence applies to ef769be38073cb33b75b39c2649d8b1c2a20cae1, not automatically to later commits.

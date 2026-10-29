@@ -1,0 +1,2 @@
+$ python3 - samples/reference_clean_plan.json /home/runner/work/_temp/evacuator-evidence/malformed-plan.json
+exit=0

@@ -1,0 +1,16 @@
+$ dotnet build Evakuator.sln -c Release --no-restore
+  Evakuator.Domain -> /home/runner/work/_temp/evacuator-source/src/Evakuator.Domain/bin/Release/net10.0/Evakuator.Domain.dll
+  Evakuator.Norms -> /home/runner/work/_temp/evacuator-source/src/Evakuator.Norms/bin/Release/net10.0/Evakuator.Norms.dll
+  Evakuator.Geometry -> /home/runner/work/_temp/evacuator-source/src/Evakuator.Geometry/bin/Release/net10.0/Evakuator.Geometry.dll
+  Evakuator.Validation -> /home/runner/work/_temp/evacuator-source/src/Evakuator.Validation/bin/Release/net10.0/Evakuator.Validation.dll
+  Evakuator.CadAdapter -> /home/runner/work/_temp/evacuator-source/src/Evakuator.CadAdapter/bin/Release/net10.0/Evakuator.CadAdapter.dll
+  Evakuator.CliDemo -> /home/runner/work/_temp/evacuator-source/src/Evakuator.CliDemo/bin/Release/net10.0/Evakuator.CliDemo.dll
+  Evakuator.UI -> /home/runner/work/_temp/evacuator-source/src/Evakuator.UI/bin/Release/net10.0/Evakuator.UI.dll
+  Evakuator.Tests -> /home/runner/work/_temp/evacuator-source/tests/Evakuator.Tests/bin/Release/net10.0/Evakuator.Tests.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:11.01
+exit=0

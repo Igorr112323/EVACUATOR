@@ -1,0 +1,2 @@
+$ cmp docs/verification/sign_catalog.svg /home/runner/work/_temp/evacuator-evidence/sign_catalog.svg
+exit=0

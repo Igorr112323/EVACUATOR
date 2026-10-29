@@ -1,0 +1,4 @@
+$ python3 - /home/runner/work/_temp/evacuator-evidence/sign_catalog.svg norms/gost_12_4_026_2015.json
+PASS: 30 labelled vector entries and visible demo/ГОСТ warning
+sha256=1512afeaabf5159606be509b6d72a20a66527fa5d3390aefcc693d45c849e5fc
+exit=0

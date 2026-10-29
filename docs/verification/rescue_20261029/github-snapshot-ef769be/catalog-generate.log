@@ -1,0 +1,4 @@
+$ dotnet run --project tools/Evakuator.SignCatalog/Evakuator.SignCatalog.csproj -c Release --no-restore --no-build -- norms/gost_12_4_026_2015.json /home/runner/work/_temp/evacuator-evidence/sign_catalog.svg
+Учебный каталог: 30 знаков; [ПРОВЕРИТЬ ПО ТЕКСТУ ГОСТ].
+/home/runner/work/_temp/evacuator-evidence/sign_catalog.svg
+exit=0

@@ -1,0 +1,338 @@
+{
+  "id": "training-bazaar",
+  "name": "Учебный корпус · этаж 2",
+  "kind": "Floor",
+  "width": 20000,
+  "height": 12000,
+  "background": [
+    {
+      "points": [
+        {
+          "x": 1000,
+          "y": 1500
+        },
+        {
+          "x": 19000,
+          "y": 1500
+        },
+        {
+          "x": 19000,
+          "y": 10500
+        },
+        {
+          "x": 1000,
+          "y": 10500
+        },
+        {
+          "x": 1000,
+          "y": 1500
+        }
+      ]
+    },
+    {
+      "points": [
+        {
+          "x": 1000,
+          "y": 4800
+        },
+        {
+          "x": 4000,
+          "y": 4800
+        }
+      ]
+    },
+    {
+      "points": [
+        {
+          "x": 5500,
+          "y": 4800
+        },
+        {
+          "x": 9500,
+          "y": 4800
+        }
+      ]
+    },
+    {
+      "points": [
+        {
+          "x": 11000,
+          "y": 4800
+        },
+        {
+          "x": 15000,
+          "y": 4800
+        }
+      ]
+    },
+    {
+      "points": [
+        {
+          "x": 16500,
+          "y": 4800
+        },
+        {
+          "x": 19000,
+          "y": 4800
+        }
+      ]
+    },
+    {
+      "points": [
+        {
+          "x": 1000,
+          "y": 7200
+        },
+        {
+          "x": 4500,
+          "y": 7200
+        }
+      ]
+    },
+    {
+      "points": [
+        {
+          "x": 6000,
+          "y": 7200
+        },
+        {
+          "x": 10000,
+          "y": 7200
+        }
+      ]
+    },
+    {
+      "points": [
+        {
+          "x": 11500,
+          "y": 7200
+        },
+        {
+          "x": 15000,
+          "y": 7200
+        }
+      ]
+    },
+    {
+      "points": [
+        {
+          "x": 16500,
+          "y": 7200
+        },
+        {
+          "x": 19000,
+          "y": 7200
+        }
+      ]
+    },
+    {
+      "points": [
+        {
+          "x": 5000,
+          "y": 1500
+        },
+        {
+          "x": 5000,
+          "y": 4800
+        }
+      ]
+    },
+    {
+      "points": [
+        {
+          "x": 10000,
+          "y": 1500
+        },
+        {
+          "x": 10000,
+          "y": 4800
+        }
+      ]
+    },
+    {
+      "points": [
+        {
+          "x": 15000,
+          "y": 1500
+        },
+        {
+          "x": 15000,
+          "y": 4800
+        }
+      ]
+    },
+    {
+      "points": [
+        {
+          "x": 5000,
+          "y": 7200
+        },
+        {
+          "x": 5000,
+          "y": 10500
+        }
+      ]
+    },
+    {
+      "points": [
+        {
+          "x": 10000,
+          "y": 7200
+        },
+        {
+          "x": 10000,
+          "y": 10500
+        }
+      ]
+    },
+    {
+      "points": [
+        {
+          "x": 15000,
+          "y": 7200
+        },
+        {
+          "x": 15000,
+          "y": 10500
+        }
+      ]
+    }
+  ],
+  "signs": [
+    {
+      "id": "exit-left",
+      "code": "E01-01",
+      "name": "Выход здесь (левосторонний)",
+      "category": "E",
+      "insertionPoint": {
+        "x": 16500
+      },
+      "modelHeight": 1000,
+      "drawingScale": 100,
+      "rotationDegrees": 0,
+      "isSyncedWithGroupScale": true,
+      "needsReview": false,
+      "reviewNote": ""
+    },
+    {
+      "id": "direction",
+      "code": "E03",
+      "name": "Направление к выходу направо",
+      "category": "E",
+      "insertionPoint": {
+        "x": 10500,
+        "y": 8000
+      },
+      "modelHeight": 1000,
+      "drawingScale": 100,
+      "rotationDegrees": 0,
+      "isSyncedWithGroupScale": true,
+      "needsReview": false,
+      "reviewNote": ""
+    },
+    {
+      "id": "extinguisher-1",
+      "code": "F04",
+      "name": "Огнетушитель",
+      "category": "F",
+      "insertionPoint": {
+        "x": 5000,
+        "y": 8000
+      },
+      "modelHeight": 1000,
+      "drawingScale": 100,
+      "rotationDegrees": 0,
+      "isSyncedWithGroupScale": true,
+      "needsReview": false,
+      "reviewNote": ""
+    },
+    {
+      "id": "fire-alarm",
+      "code": "F10",
+      "name": "Кнопка пожарной автоматики",
+      "category": "F",
+      "insertionPoint": {
+        "x": 2500,
+        "y": 8500
+      },
+      "modelHeight": 1000,
+      "drawingScale": 100,
+      "rotationDegrees": 0,
+      "isSyncedWithGroupScale": true,
+      "needsReview": false,
+      "reviewNote": ""
+    }
+  ],
+  "paths": [
+    {
+      "id": "primary-path",
+      "type": "Primary",
+      "points": [
+        {
+          "x": 2000,
+          "y": 6000
+        },
+        {
+          "x": 8500,
+          "y": 6000
+        },
+        {
+          "x": 16500,
+          "y": 6000
+        }
+      ],
+      "hasDirectionArrow": true,
+      "lineStyle": "Solid",
+      "color": "#008855",
+      "lineWeightMmOnPaper": 0.5,
+      "drawingScale": 100,
+      "needsReview": true,
+      "reviewNote": "Конец пути приближен к знаку выхода; проверьте фактическую дверь и отсутствие стен/препятствий."
+    }
+  ],
+  "markers": [
+    {
+      "id": "here-auto",
+      "position": {
+        "x": 2000,
+        "y": 6000
+      },
+      "needsReview": true,
+      "note": "Предположительное место: проектировщик обязан проверить точное положение точки."
+    }
+  ],
+  "legend": {
+    "entries": [
+      {
+        "key": "E01-01",
+        "description": "Выход здесь (левосторонний)"
+      },
+      {
+        "key": "E03",
+        "description": "Направление к эвакуационному выходу направо"
+      },
+      {
+        "key": "F04",
+        "description": "Огнетушитель"
+      },
+      {
+        "key": "F10",
+        "description": "Кнопка пожарной автоматики"
+      },
+      {
+        "key": "PATH:Primary",
+        "description": "Основной путь эвакуации"
+      },
+      {
+        "key": "HERE",
+        "description": "Вы находитесь здесь"
+      }
+    ]
+  },
+  "header": {
+    "approval": "УТВЕРЖДАЮ",
+    "title": "Учебный этаж\nПЛАН ЭВАКУАЦИИ при пожаре",
+    "location": "Этаж 2"
+  },
+  "fireInstructions": "При пожаре сообщите по телефону 01 и покиньте помещение.\nПри обнаружении пожара сообщите по телефонам 101 и 112, предупредите людей, покиньте здание по указанным путям и следуйте указаниям ответственных лиц. Не пользуйтесь лифтом."
+}

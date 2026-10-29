@@ -1,0 +1,66 @@
+<svg viewBox="0 0 900 512" role="img" xmlns="http://www.w3.org/2000/svg">
+  <title>Эвакуатор: учебное векторное превью, требует проверки проектировщиком</title>
+  <rect width="900" height="512" fill="#FFFFFF" />
+  <text x="25" y="42" font-family="sans-serif" font-size="24" fill="#142838">УСЛОВНЫЕ ОБОЗНАЧЕНИЯ</text>
+  <g transform="scale(1,-1)">
+    <polygon points="25,-118 73,-118 73,-70 25,-70" fill="#008855" stroke="none" />
+    <polyline points="27.16,-115.84 70.84,-115.84 70.84,-72.16 27.16,-72.16 27.16,-115.84" fill="none" stroke="#FFFFFF" stroke-width="1.68" stroke-linejoin="round" stroke-linecap="round" />
+    <polyline points="64.84,-110.8 64.84,-77.68 35.56,-77.68 35.56,-110.8" fill="none" stroke="#FFFFFF" stroke-width="2.16" stroke-linejoin="round" stroke-linecap="round" />
+    <polyline points="61,-109.36 61,-80.56 55.24,-80.56" fill="none" stroke="#FFFFFF" stroke-width="1.68" stroke-linejoin="round" stroke-linecap="round" />
+    <circle cx="50.92" cy="-82.96" r="3.12" fill="#FFFFFF" stroke="none" />
+    <polygon points="53.32,-87.28 48.04,-89.2 45.64,-94.48 49.96,-96.88 54.28,-92.56" fill="#FFFFFF" stroke="none" />
+    <polyline points="52.36,-91.12 57.64,-94.96 61.96,-93.52" fill="none" stroke="#FFFFFF" stroke-width="2.64" stroke-linejoin="round" stroke-linecap="round" />
+    <polyline points="48.04,-90.16 43.72,-93.04 40.36,-91.12" fill="none" stroke="#FFFFFF" stroke-width="2.64" stroke-linejoin="round" stroke-linecap="round" />
+    <polyline points="50.44,-96.4 55.24,-103.12 59.56,-106" fill="none" stroke="#FFFFFF" stroke-width="3.12" stroke-linejoin="round" stroke-linecap="round" />
+    <polyline points="49,-96.4 44.68,-101.68 39.4,-103.6" fill="none" stroke="#FFFFFF" stroke-width="3.12" stroke-linejoin="round" stroke-linecap="round" />
+  </g>
+  <text x="145" y="101" font-family="sans-serif" font-size="19" fill="#142838">E01-01</text>
+  <text x="275" y="101" font-family="sans-serif" font-size="19" fill="#334155">Выход здесь (левосторонний)</text>
+  <line x1="20" x2="880" y1="132" y2="132" stroke="#D7E2E7" />
+  <g transform="scale(1,-1)">
+    <polygon points="25,-190 73,-190 73,-142 25,-142" fill="#008855" stroke="none" />
+    <polyline points="27.16,-187.84 70.84,-187.84 70.84,-144.16 27.16,-144.16 27.16,-187.84" fill="none" stroke="#FFFFFF" stroke-width="1.68" stroke-linejoin="round" stroke-linecap="round" />
+    <circle cx="40.84" cy="-155.44" r="2.64" fill="#FFFFFF" stroke="none" />
+    <polyline points="40.84,-159.28 43.72,-166 40.36,-171.76" fill="none" stroke="#FFFFFF" stroke-width="3.6" stroke-linejoin="round" stroke-linecap="round" />
+    <polyline points="42.76,-162.16 36.52,-166.48" fill="none" stroke="#FFFFFF" stroke-width="1.92" stroke-linejoin="round" stroke-linecap="round" />
+    <polyline points="40.36,-171.76 35.08,-178.96" fill="none" stroke="#FFFFFF" stroke-width="2.64" stroke-linejoin="round" stroke-linecap="round" />
+    <polyline points="40.36,-171.76 45.64,-178" fill="none" stroke="#FFFFFF" stroke-width="2.64" stroke-linejoin="round" stroke-linecap="round" />
+    <polygon points="49.48,-166.48 60.424,-166.48 60.424,-168.4 67.72,-164.56 60.424,-160.72 60.424,-162.64 49.48,-162.64" fill="#FFFFFF" stroke="none" />
+  </g>
+  <text x="145" y="173" font-family="sans-serif" font-size="19" fill="#142838">E03</text>
+  <text x="275" y="173" font-family="sans-serif" font-size="19" fill="#334155">Направление к эвакуационному выходу направо</text>
+  <line x1="20" x2="880" y1="204" y2="204" stroke="#D7E2E7" />
+  <g transform="scale(1,-1)">
+    <polygon points="25,-262 73,-262 73,-214 25,-214" fill="#CC1E1E" stroke="none" />
+    <polyline points="27.16,-259.84 70.84,-259.84 70.84,-216.16 27.16,-216.16 27.16,-259.84" fill="none" stroke="#FFFFFF" stroke-width="1.68" stroke-linejoin="round" stroke-linecap="round" />
+    <polygon points="39.88,-251.92 57.64,-251.92 57.64,-231.76 39.88,-231.76" fill="#FFFFFF" stroke="none" />
+    <circle cx="48.76" cy="-231.76" r="8.16" fill="#FFFFFF" stroke="none" />
+    <polygon points="44.2,-230.8 52.84,-230.8 52.84,-226.96 44.2,-226.96" fill="#FFFFFF" stroke="none" />
+    <polyline points="48.52,-226.96 48.52,-223.6 57.64,-223.6" fill="none" stroke="#FFFFFF" stroke-width="2.16" stroke-linejoin="round" stroke-linecap="round" />
+    <polyline points="46.12,-225.52 39.88,-226.96 35.56,-234.16" fill="none" stroke="#FFFFFF" stroke-width="2.16" stroke-linejoin="round" stroke-linecap="round" />
+    <polygon points="44.2,-246.64 53.32,-246.64 53.32,-244.96 44.2,-244.96" fill="#CC1E1E" stroke="none" />
+  </g>
+  <text x="145" y="245" font-family="sans-serif" font-size="19" fill="#142838">F04</text>
+  <text x="275" y="245" font-family="sans-serif" font-size="19" fill="#334155">Огнетушитель</text>
+  <line x1="20" x2="880" y1="276" y2="276" stroke="#D7E2E7" />
+  <g transform="scale(1,-1)">
+    <polygon points="25,-334 73,-334 73,-286 25,-286" fill="#CC1E1E" stroke="none" />
+    <polyline points="27.16,-331.84 70.84,-331.84 70.84,-288.16 27.16,-288.16 27.16,-331.84" fill="none" stroke="#FFFFFF" stroke-width="1.68" stroke-linejoin="round" stroke-linecap="round" />
+    <polyline points="34.12,-325.36 63.88,-325.36 63.88,-294.64 34.12,-294.64 34.12,-325.36" fill="none" stroke="#FFFFFF" stroke-width="2.64" stroke-linejoin="round" stroke-linecap="round" />
+    <circle cx="49" cy="-309.52" r="9.12" fill="#FFFFFF" stroke="none" />
+    <circle cx="49" cy="-309.52" r="4.8" fill="#CC1E1E" stroke="none" />
+    <polyline points="40.36,-321.52 57.64,-321.52" fill="none" stroke="#FFFFFF" stroke-width="1.92" stroke-linejoin="round" stroke-linecap="round" />
+  </g>
+  <text x="145" y="317" font-family="sans-serif" font-size="19" fill="#142838">F10</text>
+  <text x="275" y="317" font-family="sans-serif" font-size="19" fill="#334155">Кнопка пожарной автоматики</text>
+  <line x1="20" x2="880" y1="348" y2="348" stroke="#D7E2E7" />
+  <line x1="25" x2="78" y1="382" y2="382" stroke="#008855" stroke-width="5" />
+  <polygon points="78,382 65,375 65,389" fill="#008855" />
+  <text x="145" y="389" font-family="sans-serif" font-size="19" fill="#142838">ЛИНИЯ</text>
+  <text x="275" y="389" font-family="sans-serif" font-size="19" fill="#334155">Основной путь эвакуации</text>
+  <line x1="20" x2="880" y1="420" y2="420" stroke="#D7E2E7" />
+  <circle cx="49" cy="454" r="12" fill="#165EA8" />
+  <text x="145" y="461" font-family="sans-serif" font-size="19" fill="#142838">МАРКЕР</text>
+  <text x="275" y="461" font-family="sans-serif" font-size="19" fill="#334155">Вы находитесь здесь</text>
+  <line x1="20" x2="880" y1="492" y2="492" stroke="#D7E2E7" />
+</svg>

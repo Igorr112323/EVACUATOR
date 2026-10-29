@@ -1,0 +1,9 @@
+Linux CI: https://github.com/Igorr112323/EVACUATOR/actions/runs/40835027835
+Source commit: ef769be38073cb33b75b39c2649d8b1c2a20cae1
+Current job: 123317694223; baseline job: 123317694059; both success.
+Ubuntu 24.04, official SDK 10.0.400, NuGet api.nuget.org, Release build 0 warnings/0 errors.
+xUnit 146 passed/0 failed/0 skipped; TRX retained. CLI checks passed; regenerated 30-sign catalog matches checked-in SVG byte-for-byte.
+Host/Windows/ГОСТ remain unverified.
+f54efdcaa8bea392946e73d80acae6c329e54aa70d67f6effc8c484c3e2b89e9  docs/verification/rescue_20261029/github-snapshot-ef769be-raw.tar.gz
+e38588995e8a7107905adb21701b44d45b7c3e6a838ff3f31654a99e2e2ec304  docs/verification/rescue_20261029/github-snapshot-ef769be/trx/results.trx
+1512afeaabf5159606be509b6d72a20a66527fa5d3390aefcc693d45c849e5fc  docs/verification/rescue_20261029/github-snapshot-ef769be/sign_catalog.svg

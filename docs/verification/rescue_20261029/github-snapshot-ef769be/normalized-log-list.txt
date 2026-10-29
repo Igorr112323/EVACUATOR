@@ -1,0 +1,2 @@
+Only trailing spaces and tabs normalized in readable extracted copies; raw archive is byte-exact.
+cli-second.log
