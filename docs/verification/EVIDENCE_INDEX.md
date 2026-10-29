@@ -1,5 +1,25 @@
 # Индекс доказательств — Environment Gate
 
+> **Актуальный индекс RESCUE-AND-VERIFY-01, 29.10.2026.** Исторический раздел ниже сохранён для контекста; его «текущий статус», SHA и утверждения о несохранённых исходниках относятся к 28.10. Актуальная ветка — `arena/9335e807-evacuator`; см. также [полный отчёт](rescue_20261029/REPORT.md).
+>
+> C# тесты реально выполнялись на GitHub-hosted Ubuntu, а не в локальной песочнице. Проверка на Windows и в nanoCAD не выполнялась. Python `linux_stand` и его исторические 58 тестов — отдельный проект и в C# счётчики не входят.
+
+## Первичные доказательства RESCUE
+
+| Артефакт | Что проверено и границы |
+|---|---|
+| [preservation.txt](rescue_20261029/preservation.txt), [git-before.txt](rescue_20261029/git-before.txt), [candidates](rescue_20261029/preservation-candidates.txt) | Аварийный архив с `.git`, исходное состояние, четыре побайтовых preservation-коммита, первый проверенный push. Архив хранится вне Git; эвристический скан не гарантирует отсутствия чувствительных данных. |
+| [Локальный baseline](rescue_20261029/baseline/), [официальные попытки](rescue_20261029/sdk-official-attempts.txt), [сырые логи](rescue_20261029/local-raw-logs.tar.gz) | На Debian нет `dotnet`; команды вернули 127, официальные сетевые запросы — 35. Это не неудачные C# тесты, они там не стартовали. |
+| [GitHub Linux baseline](rescue_20261029/github-baseline-source.txt), [build](rescue_20261029/github-baseline/build.log), [test](rescue_20261029/github-baseline/test.log), [TRX](rescue_20261029/github-baseline/trx/results.trx), [полный сырой архив](rescue_20261029/github-baseline-40833191162-raw.tar.gz) | Сохранённый исходный SHA `d07566376b333d9dd107bb5bb0f7065fdb087a7d`: Release 0 ошибок/0 предупреждений и 134/134 xUnit, не host. Запуск с SDK 10.0.403 выбранным roll-forward, официальный NuGet. |
+| [Красный regression run](rescue_20261029/regression-red/README.txt), [log](rescue_20261029/regression-red/test.log), [TRX](rescue_20261029/regression-red/trx/results.trx) | До исправлений 134 passed и три действительных fail (разворот линии, две культурно-зависимые диагностики). Сохранены исходный SHA, raw archive и хеши. |
+| [Красный тест легенды](rescue_20261029/legend-red/README.txt), [log](rescue_20261029/legend-red/test.log), [TRX](rescue_20261029/legend-red/trx/results.trx) | До исправления метка прямоугольного носителя пересекала область знака; 145 passed / 1 failed. Исправление сделано отдельным коммитом. |
+| [Linux green run](rescue_20261029/github-final-source.txt), [статусы](rescue_20261029/github-final/statuses.txt), [build](rescue_20261029/github-final/build.log), [test](rescue_20261029/github-final/test.log), [TRX](rescue_20261029/github-final/trx/results.trx), [raw archive](rescue_20261029/github-final-40834536893-raw.tar.gz) | SHA исходного снимка `edbff4201c087b11ed20c583d8956bac75bd8910`: 146/146, 0 пропусков, Release 0/0, CLI и каталог. Позднейший снимок может отличаться документацией и инфраструктурой; это не nanoCAD и не Windows. |
+| [Учебный каталог](sign_catalog.svg) | 30 записей, сгенерированных C# production-рендерером; SHA-256 `1512afeaabf5159606be509b6d72a20a66527fa5d3390aefcc693d45c849e5fc`. Явные предупреждения не являются нормативной сверкой или DWG-каталогом. |
+| [Аудит переносимого ядра](rescue_20261029/portable-audit.md) | Исходники, найденные и исправленные дефекты, тесты и оставшиеся риски; не нормативная или security-экспертиза. |
+| [Windows handoff](../WINDOWS_HANDOFF.md), [H01–H25](../WINDOWS_HOST_TEST_RUNBOOK.md), [портируемость](../PORTABILITY_MATRIX.md) | Подготовленные инструкции; Windows и все реальные host-сценарии остаются NOT RUN/BLOCKED. |
+
+## Исторический Environment Gate 28.10.2026
+
 > **Актуализация 28.10.2026, 18:47 UTC:** Git-объект `9e9ffb04…`, названный ниже историческим снимком, в текущей локальной базе отсутствует. Файлы исходников доступны в рабочем дереве; состояние не является чистой Git-копией. Новые журналы и контрольные суммы: [повторный Environment Gate](product_recheck_20261028/REPORT.md).
 >
 > Доказательства повторной проверки зафиксированы отдельно в локальном коммите `1c2b96f4c551ae72be681c9ed5933c41a9a58a78`; пользовательские исходники в него не включены. Push и release не выполнялись.

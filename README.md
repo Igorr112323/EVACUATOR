@@ -1,5 +1,7 @@
 # Эвакуатор — учебный прототип нормоконтроля планов эвакуации
 
+> **RESCUE-AND-VERIFY-01, 29.10.2026:** исходники сохранены в текущей Git-ветке и проверены на GitHub-hosted Linux с официальным .NET SDK/NuGet. Локальная Debian-песочница не может загрузить SDK. Реального nanoCAD-плагина, Windows host-проверки, DWG и PDF по-прежнему нет. Фактические SHA, результаты и первичные логи — в [индексе доказательств](docs/verification/EVIDENCE_INDEX.md); план передачи — [Windows handoff](docs/WINDOWS_HANDOFF.md).
+
 > **Не использовать для реального проектирования, печати, согласования или эвакуации.** База, пиктограммы, размеры, телефоны и трактовки являются демонстрационными и не сверены с официальными текстами. `[ПРОВЕРИТЬ ПО ТЕКСТУ ГОСТ]` 100% в интерфейсе — только доля пройденных семи учебных правил, **не сертификат соответствия и не оценка безопасности**.
 >
 > **nanoCAD/MultiCAD не подключён.** Здесь есть исполняемое ядро, автономное окно Avalonia и симулятор CAD-документа, но нет чтения/записи DWG, регистрации команд, настоящих `McCustomBase`, smart grips, установщика или рабочего `.cuix`. Реальный SDK и хост в среде разработки отсутствовали; включение `NANOCAD_SDK` намеренно завершает компиляцию ошибкой. Не представляйте этот проект работающим плагином nanoCAD.
@@ -40,7 +42,7 @@ dotnet run --project src/Evakuator.UI -c Release --no-build --no-restore -- --se
 | `healing_diff.json` | изменения «было → стало» и действия специалиста |
 | `demo_after_plan.json` | новая JSON-модель, исходный файл не перезаписывается |
 
-Предпросмотр без запуска: [до](docs/demo/demo_before.svg), [после](docs/demo/demo_after.svg), [легенда](docs/demo/legend_table.svg), [окно после](docs/demo/ui-after.png). Сгенерированная директория `artifacts/` игнорируется Git; SVG в `docs/demo/` — снимок демонстрации.
+Предпросмотр без запуска: [до](docs/demo/demo_before.svg), [после](docs/demo/demo_after.svg), [легенда](docs/demo/legend_table.svg), [окно после](docs/demo/ui-after.png), [учебный каталог 30 знаков](docs/verification/sign_catalog.svg). Каталог создан C#-генератором геометрии и не является официальным эталоном. Сгенерированная директория `artifacts/` игнорируется Git; SVG в `docs/demo/` — снимок демонстрации.
 
 ```sh
 dotnet run --project src/Evakuator.CliDemo -c Release -- \
@@ -50,6 +52,16 @@ dotnet run --project src/Evakuator.CliDemo -c Release -- \
 ```
 
 `--help` показывает опции. Коды выхода: `0` — ошибок учебных правил после обработки нет (предупреждения возможны); `2` — остались ошибки; `1` — не удалось прочитать/обработать вход. Файлы пишутся по одному с временным именем и заменой; **весь набор не является единой файловой транзакцией**.
+
+Учебный SVG-каталог можно воспроизвести отдельным инструментом (он не входит в solution):
+
+```sh
+dotnet restore tools/Evakuator.SignCatalog/Evakuator.SignCatalog.csproj --source https://api.nuget.org/v3/index.json
+dotnet run --project tools/Evakuator.SignCatalog -c Release --no-restore -- \
+  norms/gost_12_4_026_2015.json artifacts/sign_catalog.svg
+```
+
+Проверки CLI/каталога, логи и TRX воспроизводятся через `bash tools/verify-dotnet-linux.sh SOURCE_DIRECTORY EVIDENCE_DIRECTORY` при наличии официальных SDK и NuGet; выходной каталог должен быть новым или пустым и находиться отдельно от исходников.
 
 ## Слои и ограничения
 
@@ -76,5 +88,9 @@ dotnet run --project src/Evakuator.CliDemo -c Release -- \
 - [ADR-002: векторный DSL](docs/ADR-002-Parametric-Sign-Vector-DSL.md)
 - [ADR-003: правила и лечение](docs/ADR-003-Norm-Control-Rule-Engine.md)
 - [Чек-лист официальной сверки](docs/GOST_VERIFICATION_CHECKLIST.md)
+- [Архитектура и границы](docs/ARCHITECTURE.md)
+- [Матрица переносимости Linux/Windows](docs/PORTABILITY_MATRIX.md)
+- [Windows handoff](docs/WINDOWS_HANDOFF.md) и [host-runbook H01–H25](docs/WINDOWS_HOST_TEST_RUNBOOK.md)
 - [Реальные шаги подключения nanoCAD SDK](docs/NANOCAD_SDK_INTEGRATION_GUIDE.md)
+- [Индекс первичных доказательств](docs/verification/EVIDENCE_INDEX.md)
 - [Инженерный отчёт](CURATOR_REPORT.md)
