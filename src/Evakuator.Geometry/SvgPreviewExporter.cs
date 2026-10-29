@@ -104,8 +104,9 @@ public sealed class SvgPreviewExporter
                     Begin(writer, "circle"); Attr(writer, "cx", "49"); Attr(writer, "cy", F(top + 30)); Attr(writer, "r", "12"); Attr(writer, "fill", "#165EA8"); writer.WriteEndElement();
                 }
                 var displayKey = entry.Key.StartsWith("PATH:", StringComparison.Ordinal) ? "ЛИНИЯ" : entry.Key == "HERE" ? "МАРКЕР" : entry.Key;
-                SimpleText(writer, 120, top + 37, displayKey, 19, "#142838");
-                SimpleText(writer, 255, top + 37, entry.Description, 19, "#334155");
+                // The 2:1 carrier can extend to x=121; reserve clear space before the code.
+                SimpleText(writer, 145, top + 37, displayKey, 19, "#142838");
+                SimpleText(writer, 275, top + 37, entry.Description, 19, "#334155");
                 Begin(writer, "line"); Attr(writer, "x1", "20"); Attr(writer, "x2", "880"); Attr(writer, "y1", F(top + rowHeight - 4)); Attr(writer, "y2", F(top + rowHeight - 4)); Attr(writer, "stroke", "#D7E2E7"); writer.WriteEndElement();
             }
         });
