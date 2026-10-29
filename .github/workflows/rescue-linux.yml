@@ -1,0 +1,106 @@
+name: Rescue Linux verification
+
+on:
+  push:
+    branches:
+      - arena/9335e807-evacuator
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: .NET ${{ matrix.snapshot }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        snapshot: [baseline, current]
+    env:
+      DOTNET_CLI_TELEMETRY_OPTOUT: '1'
+      DOTNET_NOLOGO: '1'
+      NUGET_PACKAGES: ${{ runner.temp }}/evacuator-nuget-packages
+    steps:
+      - name: Checkout the triggering commit
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Export the exact snapshot without changing branches
+        id: source
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ '${{ matrix.snapshot }}' = baseline ]; then
+            source_commit=d07566376b333d9dd107bb5bb0f7065fdb087a7d
+          else
+            source_commit="$GITHUB_SHA"
+          fi
+          git cat-file -e "${source_commit}^{commit}"
+          mkdir -p "$RUNNER_TEMP/evacuator-source" "$RUNNER_TEMP/evacuator-evidence"
+          git archive "$source_commit" | tar -x -C "$RUNNER_TEMP/evacuator-source"
+          printf '%s\n' "$source_commit" > "$RUNNER_TEMP/evacuator-evidence/source-commit.txt"
+          printf 'commit=%s\n' "$source_commit" >> "$GITHUB_OUTPUT"
+
+      - name: Install the official Microsoft .NET SDK
+        id: setup
+        uses: actions/setup-dotnet@67a3573c9a986a3f9c594539f4ab511d57bb3ce9
+        with:
+          dotnet-version: 10.0.400
+
+      - name: Build, test, and exercise CLI
+        id: verify
+        continue-on-error: true
+        shell: bash
+        env:
+          EVAC_SOURCE_COMMIT: ${{ steps.source.outputs.commit }}
+        run: |
+          bash tools/verify-dotnet-linux.sh "$RUNNER_TEMP/evacuator-source" "$RUNNER_TEMP/evacuator-evidence"
+
+      - name: Upload raw logs, TRX, and CLI artifacts
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: evacuator-${{ matrix.snapshot }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/evacuator-evidence/
+          if-no-files-found: warn
+          retention-days: 30
+
+      - name: Expose a checks-API copy of the evidence
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          dir="$RUNNER_TEMP/evacuator-evidence"
+          if [ ! -d "$dir" ]; then
+            echo '::warning title=EVACUATOR_EVIDENCE_MISSING::Source export did not produce evidence.'
+            exit 0
+          fi
+          tar -czf "$RUNNER_TEMP/evacuator-evidence.tar.gz" -C "$dir" .
+          sha=$(sha256sum "$RUNNER_TEMP/evacuator-evidence.tar.gz" | cut -d ' ' -f 1)
+          encoded=$(base64 -w 0 "$RUNNER_TEMP/evacuator-evidence.tar.gz")
+          printf '::notice title=EVACUATOR_SHA256::%s\n' "$sha"
+          if [ "${#encoded}" -gt 400000 ]; then
+            echo '::warning title=EVACUATOR_EVIDENCE_TOO_LARGE::Use the uploaded artifact; checks copy omitted.'
+            exit 0
+          fi
+          i=0
+          while IFS= read -r chunk; do
+            i=$((i + 1))
+            printf '::notice title=EVACUATOR_PART_%03d::%s\n' "$i" "$chunk"
+          done < <(printf '%s' "$encoded" | fold -w 50000)
+
+      - name: Report verification result
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          file="$RUNNER_TEMP/evacuator-evidence/overall-exit.txt"
+          if [ ! -f "$file" ]; then
+            echo 'Verification was not completed; inspect setup and prior steps.' >&2
+            exit 1
+          fi
+          test "$(cat "$file")" = 0
