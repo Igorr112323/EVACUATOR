@@ -10,6 +10,10 @@ fi
 source_dir=$(cd "$1" && pwd) || exit 64
 mkdir -p "$2" || exit 1
 out=$(cd "$2" && pwd) || exit 1
+if [ -n "$(find "$out" -mindepth 1 -maxdepth 1 ! -name source-commit.txt -print -quit)" ]; then
+  printf 'Refusing to overwrite existing evidence in %s\n' "$out" >&2
+  exit 73
+fi
 cd "$source_dir" || exit 1
 status=0
 : > "$out/statuses.txt"
@@ -137,6 +141,11 @@ if any(element.tag in (namespace + 'image', namespace + 'script') for element in
 print('PASS: 30 labelled vector entries and visible demo/ГОСТ warning')
 print('sha256=' + hashlib.sha256(path.read_bytes()).hexdigest())
 PY
+    if [ -f docs/verification/sign_catalog.svg ]; then
+      capture catalog-reference-compare 0 cmp docs/verification/sign_catalog.svg "$out/sign_catalog.svg"
+    else
+      printf 'catalog-reference=NOT_PRESENT_IN_THIS_SNAPSHOT\n' >> "$out/statuses.txt"
+    fi
   else
     printf 'catalog-generate=BLOCKED (catalog executable missing)\ncatalog-check=BLOCKED\n' >> "$out/statuses.txt"
     status=1

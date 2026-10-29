@@ -86,7 +86,7 @@ jobs:
           printf '::notice title=EVACUATOR_SHA256::%s\n' "$sha"
           base64 -w 0 "$RUNNER_TEMP/evacuator-evidence.tar.gz" | fold -w 3000 > "$RUNNER_TEMP/evacuator-parts.txt"
           printf '\n' >> "$RUNNER_TEMP/evacuator-parts.txt"
-          if [ "$(wc -l < "$RUNNER_TEMP/evacuator-parts.txt")" -gt 27 ]; then
+          if [ "$(wc -l < "$RUNNER_TEMP/evacuator-parts.txt")" -gt 36 ]; then
             echo '::warning title=EVACUATOR_EVIDENCE_TOO_LARGE::Use the uploaded artifact; checks copy omitted.'
             exit 1
           fi
@@ -113,6 +113,14 @@ jobs:
         run: |
           if [ -f "$RUNNER_TEMP/evacuator-parts.txt" ]; then
             awk 'NR >= 19 && NR <= 27 { printf "::notice title=EVACUATOR_PART_%03d::%s\n", NR, $0 }' "$RUNNER_TEMP/evacuator-parts.txt"
+          fi
+
+      - name: Expose evidence parts 28-36
+        if: always()
+        shell: bash
+        run: |
+          if [ -f "$RUNNER_TEMP/evacuator-parts.txt" ]; then
+            awk 'NR >= 28 && NR <= 36 { printf "::notice title=EVACUATOR_PART_%03d::%s\n", NR, $0 }' "$RUNNER_TEMP/evacuator-parts.txt"
           fi
 
       - name: Report verification result
