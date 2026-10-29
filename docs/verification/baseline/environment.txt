@@ -1,0 +1,59 @@
+=== timestamp UTC ===
+2026-10-28T14:31:52Z
+=== OS and architecture ===
+PRETTY_NAME="Debian GNU/Linux 12 (bookworm)"
+NAME="Debian GNU/Linux"
+VERSION_ID="12"
+VERSION="12 (bookworm)"
+VERSION_CODENAME=bookworm
+ID=debian
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"
+Linux 6.1.158+ x86_64
+=== tool lookup on PATH ===
+dotnet: NOT FOUND
+nanoCAD: NOT FOUND
+nanocad: NOT FOUND
+nanoCad: NOT FOUND
+wine: NOT FOUND
+pwsh: NOT FOUND
+Xvfb: NOT FOUND
+xvfb-run: NOT FOUND
+msbuild: NOT FOUND
+csc: NOT FOUND
+=== display/session ===
+DISPLAY=NOT SET
+WAYLAND_DISPLAY=NOT SET
+=== known local SDK, package and host dirs ===
+lib: NOT FOUND
+sdk: NOT FOUND
+/usr/share/dotnet: NOT FOUND
+/usr/local/share/dotnet: NOT FOUND
+/opt/dotnet: NOT FOUND
+/home/user/.dotnet: NOT FOUND
+/home/user/.nuget/packages: NOT FOUND
+/home/user/.cache/evacuator-dotnet/dotnet: NOT FOUND
+/tmp/evacuator-nuget-src/packages: NOT FOUND
+/tmp/evac-avalonia-src/offline-packages: NOT FOUND
+=== upload filenames (not official standards) ===
+2_PROMPT_GitHub_Agent_Evakuator.md
+4_PROMPT_FINAL_PRODUCT_Evakuator.md
+=== bounded SDK/host filename scan: /home /opt /usr/local /usr/share /usr/lib /mnt and uploads ===
+=== candidate source documents: workspace and uploads ===
+/home/user/EVACUATOR/norms/gost_12_4_026_2015.json
+/home/user/EVACUATOR/norms/gost_12_4_026_2015.schema.json
+=== DWG candidates: workspace and uploads ===
+=== Each bounded host/SDK scan separately (empty matches, zero errors) ===
+/home: exit=0 matches=0 errors=0
+/opt: exit=0 matches=0 errors=0
+/usr/local: exit=0 matches=0 errors=0
+/usr/share: exit=0 matches=0 errors=0
+/usr/lib: exit=0 matches=0 errors=0
+/mnt: exit=0 matches=0 errors=0
+/tmp/arena-coding-uploads: exit=0 matches=0 errors=0
+=== Directory name candidates (source code directory is not an SDK) ===
+/home/user/EVACUATOR/src/Evakuator.CadAdapter/NanoCad
+=== PDF/doc document candidates in workspace and uploads ===
+=== package lookup (installed packages only) ===
+No installed packages matched.

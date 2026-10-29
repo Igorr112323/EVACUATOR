@@ -1,0 +1,7 @@
+$ git diff --cached --check (before removing extra EOF blank lines)
+docs/verification/product_recheck_20261028/baseline-attempts.txt:20: new blank line at EOF.
+docs/verification/product_recheck_20261028/git-before.txt:54: new blank line at EOF.
+[exit=2]
+
+$ git diff --cached --check (after removing extra EOF blank lines)
+[exit=0]

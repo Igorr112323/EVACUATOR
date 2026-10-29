@@ -1,0 +1,53 @@
+$ git status --short --branch
+## arena/9335e807-evacuator
+ M README.md
+?? .gitignore
+?? CURATOR_REPORT.md
+?? Directory.Build.props
+?? Evakuator.sln
+?? PRODUCT_BLOCKERS.md
+?? docs/
+?? global.json
+?? linux_stand/
+?? norms/
+?? packaging/
+?? samples/
+?? src/
+?? tests/
+?? tools/
+[exit=0]
+
+$ git rev-parse HEAD
+9bd03ab9753877b75f5598da0b1315252f7ab7eb
+[exit=0]
+
+$ git log -5 --oneline --decorate
+9bd03ab (grafted, HEAD -> arena/9335e807-evacuator, origin/main, origin/HEAD, main) Initial commit
+[exit=0]
+
+$ git ls-files
+README.md
+[exit=0]
+
+$ git diff --stat
+ README.md | 81 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-
+ 1 file changed, 80 insertions(+), 1 deletion(-)
+[exit=0]
+
+$ git diff --check
+[exit=0]
+
+$ git diff --cached --check
+[exit=0]
+
+$ git cat-file -e 68e8cde^{commit}
+fatal: Not a valid object name 68e8cde^{commit}
+[exit=128]
+
+$ git cat-file -e 9e9ffb04e8660fb3d780e9370862b06ec721e879^{commit}
+fatal: Not a valid object name 9e9ffb04e8660fb3d780e9370862b06ec721e879^{commit}
+[exit=128]
+
+$ git cat-file -e 0ce8b316f355c4f11248be0da151ede7a17a4a59^{commit}
+fatal: Not a valid object name 0ce8b316f355c4f11248be0da151ede7a17a4a59^{commit}
+[exit=128]

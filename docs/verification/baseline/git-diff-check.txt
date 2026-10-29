@@ -1,0 +1,9 @@
+=== UTC timestamp ===
+2026-10-28T14:36:27Z
+$ git diff --check
+exit_code=0
+$ git diff --cached --check
+exit_code=0
+$ git diff --name-only 9e9ffb04e8660fb3d780e9370862b06ec721e879 -- src tests norms samples
+exit_code=0 (no source/test/norm/sample changes)
+Git snapshot manifest verification: 94/94 SHA-256 entries matched 9e9ffb04e8660fb3d780e9370862b06ec721e879.

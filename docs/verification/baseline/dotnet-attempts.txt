@@ -1,0 +1,21 @@
+Baseline commands on the current machine; exit 127 means the executable was not found.
+
+$ dotnet restore Evakuator.sln
+bash: line 1: dotnet: command not found
+exit_code=127
+
+$ dotnet build Evakuator.sln -c Release --no-restore
+bash: line 1: dotnet: command not found
+exit_code=127
+
+$ dotnet test Evakuator.sln -c Release --no-build --no-restore
+bash: line 1: dotnet: command not found
+exit_code=127
+
+$ dotnet run --project src/Evakuator.CliDemo -c Release --no-build --no-restore
+bash: line 1: dotnet: command not found
+exit_code=127
+
+$ pwsh -NoProfile -File tools/sdk-preflight.ps1
+bash: line 1: pwsh: command not found
+exit_code=127

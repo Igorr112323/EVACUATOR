@@ -1,0 +1,18 @@
+=== Source branch/HEAD before the baseline preservation commit ===
+9bd03ab9753877b75f5598da0b1315252f7ab7eb
+=== Preservation snapshot ===
+commit 9e9ffb04e8660fb3d780e9370862b06ec721e879
+parent 9bd03ab9753877b75f5598da0b1315252f7ab7eb
+subject Preserve existing evacuation prototype snapshot
+=== Previous historical short commit: local check ===
+$ git cat-file -t 68e8cde
+fatal: Not a valid object name 68e8cde
+exit_code=128
+=== Previous historical short commit: GitHub read-only lookup ===
+$ gh api repos/Igorr112323/EVACUATOR/commits/68e8cde --jq .sha
+{"message":"No commit found for SHA: 68e8cde","documentation_url":"https://docs.github.com/rest/commits/commits#get-a-commit","status":"422"}gh: No commit found for SHA: 68e8cde (HTTP 422)
+
+exit_code=1
+=== Git status immediately after the baseline commit and before new documentation ===
+## arena/9335e807-evacuator
+(No status entries; new verification files were created afterwards.)

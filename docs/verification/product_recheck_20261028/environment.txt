@@ -1,0 +1,89 @@
+$ date -u +%Y-%m-%dT%H:%M:%SZ
+2026-10-28T18:47:57Z
+[exit=0]
+
+$ uname -a
+Linux e2b.local 6.1.158+ #1 SMP PREEMPT_DYNAMIC Mon May 11 18:48:24 UTC 2026 x86_64 GNU/Linux
+[exit=0]
+
+$ cat /etc/os-release
+PRETTY_NAME="Debian GNU/Linux 12 (bookworm)"
+NAME="Debian GNU/Linux"
+VERSION_ID="12"
+VERSION="12 (bookworm)"
+VERSION_CODENAME=bookworm
+ID=debian
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"
+[exit=0]
+
+$ getconf LONG_BIT
+64
+[exit=0]
+
+$ command -v dotnet
+[exit=1]
+
+$ command -v nanoCAD
+[exit=1]
+
+$ command -v nanocad
+[exit=1]
+
+$ command -v nanoCad
+[exit=1]
+
+$ command -v wine
+[exit=1]
+
+$ command -v pwsh
+[exit=1]
+
+$ command -v Xvfb
+[exit=1]
+
+$ command -v xvfb-run
+[exit=1]
+
+$ command -v msbuild
+[exit=1]
+
+$ command -v csc
+[exit=1]
+
+$ printf DISPLAY and WAYLAND_DISPLAY
+DISPLAY=<unset>
+WAYLAND_DISPLAY=<unset>
+
+$ sha256sum attached product prompt
+e0ae0ec7f3f212f224110a20399f5d1eb81cfb87c46fb1b6e997480e42e634db  /tmp/arena-coding-uploads/4_PROMPT_FINAL_PRODUCT_Evakuator (1).md
+[exit=0]
+
+$ find candidate nanoCAD host and SDK filenames (limited roots)
+-- /home/user --
+[find /home/user exit=0]
+-- /opt --
+[find /opt exit=0]
+-- /usr/local --
+[find /usr/local exit=0]
+-- /usr/share --
+[find /usr/share exit=0]
+-- /usr/lib --
+[find /usr/lib exit=0]
+-- /mnt --
+[find /mnt exit=0]
+-- /tmp/arena-coding-uploads --
+[find /tmp/arena-coding-uploads exit=0]
+
+$ find supplied test DWG and official-standard PDFs by filename (limited roots)
+-- /home/user/EVACUATOR --
+[find /home/user/EVACUATOR exit=0]
+-- /tmp/arena-coding-uploads --
+[find /tmp/arena-coding-uploads exit=0]
+
+$ dpkg-query -W possible nanoCAD / MultiCAD / dotnet packages
+dpkg-query: no packages found matching *nanocad*
+dpkg-query: no packages found matching *multicad*
+dpkg-query: no packages found matching *dotnet*
+[exit=1]

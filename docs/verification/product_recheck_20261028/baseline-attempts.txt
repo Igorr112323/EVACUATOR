@@ -1,0 +1,19 @@
+$ dotnet restore Evakuator.sln
+environment: line 4: dotnet: command not found
+[exit=127]
+
+$ dotnet build Evakuator.sln -c Release --no-restore
+environment: line 4: dotnet: command not found
+[exit=127]
+
+$ dotnet test Evakuator.sln -c Release --no-build --no-restore
+environment: line 4: dotnet: command not found
+[exit=127]
+
+$ dotnet run --project src/Evakuator.CliDemo -c Release --no-build --no-restore
+environment: line 4: dotnet: command not found
+[exit=127]
+
+$ pwsh -NoProfile -File tools/sdk-preflight.ps1
+environment: line 4: pwsh: command not found
+[exit=127]
