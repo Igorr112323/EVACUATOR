@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Concept only. NOT a nanoCAD ribbon/CUIX schema; these commands are NOT registered. -->
+<IntegrationSketch status="not-implemented" verification="VERIFY_IN_NANOCAD_SDK">
+  <DesiredAction id="EVAC_PALETTE" title="Каталог знаков" />
+  <DesiredAction id="EVAC_INSERT_SIGN" title="Вставить знак" />
+  <DesiredAction id="EVAC_INSERT_PATH" title="Добавить путь" />
+  <DesiredAction id="EVAC_CHECK" title="Проверить учебные правила" />
+  <DesiredAction id="EVAC_HEAL" title="Исправить всё с ручной проверкой" />
+</IntegrationSketch>

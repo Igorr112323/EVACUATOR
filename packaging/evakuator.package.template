@@ -1,0 +1,5 @@
+EVAKUATOR PACKAGE DESIGN — NOT A LOADABLE PACKAGE
+[VERIFY_IN_NANOCAD_SDK] Required: supported nanoCAD version/framework, real host bridge,
+verified plugin manifest schema, versioned deployment layout, ribbon/CUIX, signing,
+installer/uninstaller, dependency licensing, DWG round-trip and undo tests.
+No plugin registration, no SDK binaries, and no deployment are performed by this template.
