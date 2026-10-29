@@ -1,0 +1,10 @@
+GitHub-hosted Linux baseline, exact source commit d07566376b333d9dd107bb5bb0f7065fdb087a7d
+Run: https://github.com/Igorr112323/EVACUATOR/actions/runs/40833191162
+Trigger commit: 0325ff04e3dd85467ffc1de2a1294cefb392275c; baseline job: 123311844726
+21 ordered Checks API chunks reconstructed and SHA-256 verified against the checksum emitted by the runner.
+d46371c08c4269f655ee11f8295f613ff46e23addc707ec624f95a193cc31f34  docs/verification/rescue_20261029/github-baseline-40833191162-raw.tar.gz
+Raw archive retains every byte. Extracted github-baseline/cli-second.log strips a trailing space for Git whitespace hygiene; other extracted files are unchanged.
+SDK selected by global.json roll-forward: 10.0.403 (runner also had setup-dotnet 10.0.400 installed); NuGet source official api.nuget.org.
+Official metadata: https://github.com/dotnet/core/blob/main/release-notes/10.0/10.0.14/release.json
+Official SDK 10.0.403 Linux x64 SHA-512: b7b3d8461cf98b07d2552ce9199702fa3ad010ac2671a5f8cd5136f7534e50f6855ba7bbb02b11494563f1d04156276a31cda1103b900e5eecd0d9473dc7b9c5
+The SDK archive hash was obtained from official metadata, not independently measured on the runner.

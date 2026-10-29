@@ -1,0 +1,6 @@
+source-directory=/home/runner/work/_temp/evacuator-source
+source-commit=d07566376b333d9dd107bb5bb0f7065fdb087a7d
+utc=2026-10-29T07:05:35Z
+platform=Linux runnervm48cm3 7.0.0-1017-azure #17~24.04.1-Ubuntu SMP PREEMPT Thu Sep 24 18:46:57 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+nuget-source=https://api.nuget.org/v3/index.json
+NuGetAudit is not disabled by this script.

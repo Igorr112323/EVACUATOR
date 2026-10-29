@@ -1,0 +1,11 @@
+$ dotnet restore Evakuator.sln --source https://api.nuget.org/v3/index.json
+  Determining projects to restore...
+  Restored /home/runner/work/_temp/evacuator-source/src/Evakuator.CliDemo/Evakuator.CliDemo.csproj (in 202 ms).
+  Restored /home/runner/work/_temp/evacuator-source/src/Evakuator.Norms/Evakuator.Norms.csproj (in 199 ms).
+  Restored /home/runner/work/_temp/evacuator-source/src/Evakuator.Domain/Evakuator.Domain.csproj (in 201 ms).
+  Restored /home/runner/work/_temp/evacuator-source/src/Evakuator.Geometry/Evakuator.Geometry.csproj (in 4 ms).
+  Restored /home/runner/work/_temp/evacuator-source/src/Evakuator.CadAdapter/Evakuator.CadAdapter.csproj (in 11 ms).
+  Restored /home/runner/work/_temp/evacuator-source/src/Evakuator.Validation/Evakuator.Validation.csproj (in 4 ms).
+  Restored /home/runner/work/_temp/evacuator-source/src/Evakuator.UI/Evakuator.UI.csproj (in 4.69 sec).
+  Restored /home/runner/work/_temp/evacuator-source/tests/Evakuator.Tests/Evakuator.Tests.csproj (in 4.42 sec).
+exit=0

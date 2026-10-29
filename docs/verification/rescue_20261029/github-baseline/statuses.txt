@@ -1,0 +1,9 @@
+dotnet-info=0 (expected 0)
+restore=0 (expected 0)
+build=0 (expected 0)
+test=0 (expected 0)
+cli-positive=0 (expected 0)
+cli-negative=1 (expected 1)
+cli-negative-message=PASS
+cli-second=0 (expected 0)
+cli-artifact-check=0 (expected 0)
