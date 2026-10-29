@@ -12,7 +12,7 @@ permissions:
 jobs:
   verify:
     name: .NET ${{ matrix.snapshot }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 20
     strategy:
       fail-fast: false
@@ -23,7 +23,7 @@ jobs:
       DOTNET_NOLOGO: '1'
     steps:
       - name: Checkout the triggering commit
-        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
         with:
           fetch-depth: 0
           persist-credentials: false
@@ -46,7 +46,7 @@ jobs:
 
       - name: Install the official Microsoft .NET SDK
         id: setup
-        uses: actions/setup-dotnet@67a3573c9a986a3f9c594539f4ab511d57bb3ce9
+        uses: actions/setup-dotnet@26b0ec14cb23fa6904739307f278c14f94c95bf1
         with:
           dotnet-version: 10.0.400
 
@@ -62,14 +62,14 @@ jobs:
 
       - name: Upload raw logs, TRX, and CLI artifacts
         if: always()
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f
         with:
           name: evacuator-${{ matrix.snapshot }}-${{ github.run_id }}-${{ github.run_attempt }}
           path: ${{ runner.temp }}/evacuator-evidence/
           if-no-files-found: warn
           retention-days: 30
 
-      - name: Expose a checks-API copy of the evidence
+      - name: Pack a checks-API copy of the evidence
         if: always()
         shell: bash
         run: |
@@ -81,17 +81,37 @@ jobs:
           fi
           tar -czf "$RUNNER_TEMP/evacuator-evidence.tar.gz" -C "$dir" .
           sha=$(sha256sum "$RUNNER_TEMP/evacuator-evidence.tar.gz" | cut -d ' ' -f 1)
-          encoded=$(base64 -w 0 "$RUNNER_TEMP/evacuator-evidence.tar.gz")
           printf '::notice title=EVACUATOR_SHA256::%s\n' "$sha"
-          if [ "${#encoded}" -gt 400000 ]; then
+          base64 -w 0 "$RUNNER_TEMP/evacuator-evidence.tar.gz" | fold -w 3000 > "$RUNNER_TEMP/evacuator-parts.txt"
+          printf '\n' >> "$RUNNER_TEMP/evacuator-parts.txt"
+          if [ "$(wc -l < "$RUNNER_TEMP/evacuator-parts.txt")" -gt 27 ]; then
             echo '::warning title=EVACUATOR_EVIDENCE_TOO_LARGE::Use the uploaded artifact; checks copy omitted.'
-            exit 0
+            exit 1
           fi
-          i=0
-          while IFS= read -r chunk; do
-            i=$((i + 1))
-            printf '::notice title=EVACUATOR_PART_%03d::%s\n' "$i" "$chunk"
-          done < <(printf '%s' "$encoded" | fold -w 50000)
+
+      - name: Expose evidence parts 1-9
+        if: always()
+        shell: bash
+        run: |
+          if [ -f "$RUNNER_TEMP/evacuator-parts.txt" ]; then
+            awk 'NR >= 1 && NR <= 9 { printf "::notice title=EVACUATOR_PART_%03d::%s\n", NR, $0 }' "$RUNNER_TEMP/evacuator-parts.txt"
+          fi
+
+      - name: Expose evidence parts 10-18
+        if: always()
+        shell: bash
+        run: |
+          if [ -f "$RUNNER_TEMP/evacuator-parts.txt" ]; then
+            awk 'NR >= 10 && NR <= 18 { printf "::notice title=EVACUATOR_PART_%03d::%s\n", NR, $0 }' "$RUNNER_TEMP/evacuator-parts.txt"
+          fi
+
+      - name: Expose evidence parts 19-27
+        if: always()
+        shell: bash
+        run: |
+          if [ -f "$RUNNER_TEMP/evacuator-parts.txt" ]; then
+            awk 'NR >= 19 && NR <= 27 { printf "::notice title=EVACUATOR_PART_%03d::%s\n", NR, $0 }' "$RUNNER_TEMP/evacuator-parts.txt"
+          fi
 
       - name: Report verification result
         if: always()

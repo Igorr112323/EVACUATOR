@@ -1,0 +1,9 @@
+GitHub-hosted Linux CI run: https://github.com/Igorr112323/EVACUATOR/actions/runs/40832909318
+Trigger commit: 5bbc3be172380552909f7ecb204e2c01b63d7a97
+Baseline source: d07566376b333d9dd107bb5bb0f7065fdb087a7d
+Run conclusion: success; baseline and current jobs both reported success.
+The workflow reports a failure if SDK setup, restore, build, tests, CLI positive/negative or idempotence checks fail. Exact counts are not inferred from the job status.
+The run used GitHub-hosted Linux, not the local sandbox. GitHub emitted a Node 20 action deprecation warning; no C# compiler warning is inferred from that warning.
+Artifacts: baseline 12878609289, SHA-256 c9ac99d99fbd10b7f480722653a1e81c4b5e861b2e232875dab9b90c448bbff9; current 12878609258, SHA-256 ad6b2eed6ac6fd95cb3385f4e0ef37d6dce0364cbf5e861b2ee. GitHub artifact retention: until 2026-11-28.
+The sandbox could not download the artifacts because the redirected blob storage host is outside its network access; the signed URL is deliberately not retained here.
+The first checks-API copy was truncated at 4096 characters by GitHub. The workflow was amended to emit smaller, numbered parts and rerun the same baseline; the evidence must be verified by SHA-256 after reconstruction.
