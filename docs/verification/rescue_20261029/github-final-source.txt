@@ -1,0 +1,9 @@
+Linux CI green result: https://github.com/Igorr112323/EVACUATOR/actions/runs/40834536893
+Source commit: edbff4201c087b11ed20c583d8956bac75bd8910
+Official SDK 10.0.400 installed in isolated runner temp; Ubuntu 24.04; restore source api.nuget.org.
+Release build: 0 warnings / 0 errors; xUnit: 146 passed / 0 failed / 0 skipped; TRX retained.
+CLI positive and two negative scenarios passed, second healing pass unchanged; 30-sign C# catalog validated.
+This Linux run is not a Windows, nanoCAD, DWG, PDF or normative test.
+438bb93700f044ab75afd40def144d5afcdd3cbc46319d120eb195b8cfaeec7e  docs/verification/rescue_20261029/github-final-40834536893-raw.tar.gz
+d2f5f2b06a6c15e1e1bc1544bcc95de58a86f122827f67915af32d0b29b3e72c  docs/verification/rescue_20261029/github-final/trx/results.trx
+1512afeaabf5159606be509b6d72a20a66527fa5d3390aefcc693d45c849e5fc  docs/verification/rescue_20261029/github-final/sign_catalog.svg

@@ -1,0 +1,16 @@
+dotnet-info=0 (expected 0)
+restore=0 (expected 0)
+build=0 (expected 0)
+test=0 (expected 0)
+cli-positive=0 (expected 0)
+cli-negative=1 (expected 1)
+cli-negative-message=PASS
+cli-malformed-prepare=0 (expected 0)
+cli-malformed=1 (expected 1)
+cli-malformed-check=PASS
+cli-second=0 (expected 0)
+cli-artifact-check=0 (expected 0)
+catalog-restore=0 (expected 0)
+catalog-build=0 (expected 0)
+catalog-generate=0 (expected 0)
+catalog-check=0 (expected 0)

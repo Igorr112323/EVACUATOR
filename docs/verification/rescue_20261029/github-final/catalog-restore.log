@@ -1,0 +1,5 @@
+$ dotnet restore tools/Evakuator.SignCatalog/Evakuator.SignCatalog.csproj --source https://api.nuget.org/v3/index.json
+  Determining projects to restore...
+  Restored /home/runner/work/_temp/evacuator-source/tools/Evakuator.SignCatalog/Evakuator.SignCatalog.csproj (in 134 ms).
+  3 of 4 projects are up-to-date for restore.
+exit=0

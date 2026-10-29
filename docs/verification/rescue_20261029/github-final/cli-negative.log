@@ -1,0 +1,3 @@
+$ dotnet run --project src/Evakuator.CliDemo -c Release --no-restore --no-build -- --unknown-option
+Ошибка демонстрации: Неизвестный аргумент или отсутствует значение: --unknown-option. Используйте --help.
+exit=1
