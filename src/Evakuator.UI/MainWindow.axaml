@@ -1,0 +1,80 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="clr-namespace:Evakuator.UI.Controls"
+        x:Class="Evakuator.UI.MainWindow"
+        Title="Эвакуатор — учебное рабочее пространство" Width="1500" Height="900" MinWidth="1080" MinHeight="680" Background="#F3F7F5">
+  <Grid RowDefinitions="74,*">
+    <Border Grid.Row="0" Background="White" BorderBrush="#E4ECE8" BorderThickness="0,0,0,1">
+      <Grid ColumnDefinitions="300,*,Auto" Margin="24,0" VerticalAlignment="Center">
+        <StackPanel Orientation="Horizontal" Spacing="10" VerticalAlignment="Center">
+          <Border Width="38" Height="38" CornerRadius="10" Background="#087D5B"><TextBlock Text="↗" FontSize="24" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold"/></Border>
+          <StackPanel Spacing="1"><TextBlock Text="ЭВАКУАТОР" FontSize="15" FontWeight="Bold"/><TextBlock Text="ПЛАНЫ ЭВАКУАЦИИ" Classes="eyebrow"/></StackPanel>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="10" VerticalAlignment="Center">
+          <TextBlock Text="Рабочее пространство" FontSize="13" FontWeight="SemiBold"/>
+          <TextBlock Text="/" Classes="muted"/><TextBlock Text="Учебный план" Classes="muted" FontSize="13"/>
+        </StackPanel>
+        <Border Grid.Column="2" Background="#FFF4DB" CornerRadius="7" Padding="10,6" VerticalAlignment="Center"><TextBlock Text="●  ТРЕБУЕТ ПРОВЕРКИ" FontSize="10" FontWeight="Bold" Foreground="#A36713"/></Border>
+      </Grid>
+    </Border>
+    <Grid Grid.Row="1" ColumnDefinitions="290,*,360" Margin="16" ColumnSpacing="14">
+      <Border Grid.Column="0" Classes="card">
+        <Grid RowDefinitions="Auto,Auto,Auto,*,Auto" Margin="16">
+          <StackPanel Spacing="3"><TextBlock Text="БИБЛИОТЕКА" Classes="eyebrow"/><TextBlock Text="Знаки безопасности" FontSize="18" FontWeight="Bold"/><TextBlock Text="Векторная учебная база · 30 знаков" Classes="muted" FontSize="11"/></StackPanel>
+          <TextBox Grid.Row="1" Margin="0,16,0,8" Watermark="Поиск по названию или коду" Text="{Binding Catalog.Search, Mode=TwoWay}"/>
+          <ComboBox Grid.Row="2" HorizontalAlignment="Stretch" ItemsSource="{Binding Catalog.Categories}" SelectedItem="{Binding Catalog.SelectedCategory, Mode=TwoWay}"/>
+          <ListBox Grid.Row="3" Margin="0,10,0,10" Background="Transparent" BorderThickness="0" ItemsSource="{Binding Catalog.FilteredSigns}" SelectedItem="{Binding Catalog.SelectedSign, Mode=TwoWay}">
+            <ListBox.ItemTemplate><DataTemplate>
+              <Grid ColumnDefinitions="44,*" ColumnSpacing="10" Margin="0,4" MinHeight="46">
+                <controls:VectorPreview Recipe="{Binding Preview}" Width="42" Height="42"/>
+                <StackPanel Grid.Column="1" VerticalAlignment="Center" Spacing="2"><TextBlock Text="{Binding Code}" FontWeight="Bold" FontSize="12"/><TextBlock Text="{Binding Name}" Classes="muted" FontSize="11" TextTrimming="CharacterEllipsis"/></StackPanel>
+              </Grid>
+            </DataTemplate></ListBox.ItemTemplate>
+          </ListBox>
+          <StackPanel Grid.Row="4" Spacing="8">
+            <TextBlock Text="{Binding Catalog.SelectedSign.Description}" Classes="muted" FontSize="10" TextWrapping="Wrap"/>
+            <TextBlock Text="{Binding Catalog.SelectedSign.Reference}" Foreground="#946326" FontSize="10" TextWrapping="Wrap"/>
+            <Grid ColumnDefinitions="*,*" ColumnSpacing="8">
+              <StackPanel Spacing="3"><TextBlock Text="ВЫСОТА, ММ" Classes="eyebrow"/><TextBox Text="{Binding HeightInput, Mode=TwoWay}"/></StackPanel>
+              <StackPanel Grid.Column="1" Spacing="3"><TextBlock Text="МАСШТАБ 1 :" Classes="eyebrow"/><TextBox Text="{Binding ScaleInput, Mode=TwoWay}"/></StackPanel>
+            </Grid>
+            <Button Classes="primary" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Content="+  Добавить в центр плана" Command="{Binding InsertSignCommand}"/>
+            <TextBlock Text="Положение потребуется подтвердить вручную" Classes="muted" FontSize="10" TextWrapping="Wrap"/>
+          </StackPanel>
+        </Grid>
+      </Border>
+      <Grid Grid.Column="1" RowDefinitions="Auto,*,Auto" RowSpacing="12">
+        <Grid ColumnDefinitions="*,Auto" Margin="4,2,2,0">
+          <StackPanel Spacing="3"><TextBlock Text="ПЛАН ЭВАКУАЦИИ" Classes="eyebrow"/><TextBlock Text="{Binding PlanName}" FontSize="23" FontWeight="Bold"/><TextBlock Text="Модель в миллиметрах · демонстрационный сценарий" Classes="muted" FontSize="12"/></StackPanel>
+          <StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="8" VerticalAlignment="Center">
+            <Button Classes="subtle" Content="↶  Отменить" Command="{Binding Inspector.UndoCommand}"/>
+            <Button Classes="subtle" Content="Проверить" Command="{Binding Inspector.CheckCommand}"/>
+            <Button Classes="primary" Content="✦  Исправить всё" Command="{Binding Inspector.HealCommand}"/>
+          </StackPanel>
+        </Grid>
+        <Border Grid.Row="1" Classes="card" ClipToBounds="True">
+          <Grid RowDefinitions="Auto,*,Auto">
+            <Grid ColumnDefinitions="*,Auto" Margin="18,14"><StackPanel Orientation="Horizontal" Spacing="8"><TextBlock Text="◫" Foreground="#087D5B" FontSize="17"/><TextBlock Text="СХЕМА ЭТАЖА" FontWeight="Bold" FontSize="11" VerticalAlignment="Center"/></StackPanel><TextBlock Grid.Column="1" Text="КРАСНЫЙ КОНТУР — ЗАМЕЧАНИЕ" Classes="eyebrow" VerticalAlignment="Center"/></Grid>
+            <controls:PlanCanvas Grid.Row="1" Plan="{Binding CurrentPlan}" Database="{Binding Database}" HighlightedIds="{Binding HighlightedIds}"/>
+            <Grid Grid.Row="2" ColumnDefinitions="*,Auto" Margin="18,13"><TextBlock Text="{Binding Feedback}" Classes="muted" FontSize="11" TextWrapping="Wrap"/><StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="5"><TextBlock Text="Знаков:" Classes="muted" FontSize="11"/><TextBlock Text="{Binding SignCount}" FontWeight="Bold" FontSize="11"/><TextBlock Text="   Путей:" Classes="muted" FontSize="11"/><TextBlock Text="{Binding PathCount}" FontWeight="Bold" FontSize="11"/></StackPanel></Grid>
+          </Grid>
+        </Border>
+        <Border Grid.Row="2" Background="#E9F3EF" CornerRadius="9" Padding="13,10"><TextBlock Text="ℹ  Результат — учебная проверка, не заключение о соответствии ГОСТ. Маршруты, стены и размещение проверяет проектировщик." Foreground="#456C5D" FontSize="11" TextWrapping="Wrap"/></Border>
+      </Grid>
+      <Border Grid.Column="2" Classes="card">
+        <Grid RowDefinitions="Auto,Auto,*,Auto" Margin="16">
+          <StackPanel Spacing="3"><TextBlock Text="ИНСПЕКТОР" Classes="eyebrow"/><TextBlock Text="Нормоконтроль" FontSize="18" FontWeight="Bold"/><TextBlock Text="7 формализованных учебных правил" Classes="muted" FontSize="11"/></StackPanel>
+          <Border Grid.Row="1" Background="#EEF7F2" CornerRadius="9" Padding="14" Margin="0,16,0,12">
+            <Grid ColumnDefinitions="*,Auto"><StackPanel Spacing="5"><TextBlock Text="ПРОЙДЕНО ПРАВИЛ" Classes="eyebrow"/><StackPanel Orientation="Horizontal" Spacing="6"><TextBlock Text="{Binding Inspector.ErrorCount}" FontWeight="Bold" Foreground="#C1493D"/><TextBlock Text="ошибок" Classes="muted" FontSize="12"/><TextBlock Text="·" Classes="muted"/><TextBlock Text="{Binding Inspector.WarningCount}" FontWeight="Bold" Foreground="#A36713"/><TextBlock Text="проверить" Classes="muted" FontSize="12"/></StackPanel></StackPanel><TextBlock Grid.Column="1" Text="{Binding Inspector.ScoreText}" FontSize="27" FontWeight="Bold" Foreground="#087D5B" VerticalAlignment="Center"/></Grid>
+          </Border>
+          <TabControl Grid.Row="2">
+            <TabItem Header="Замечания" FontSize="12"><ListBox Background="Transparent" BorderThickness="0" ItemsSource="{Binding Inspector.Issues}"><ListBox.ItemTemplate><DataTemplate><Border Background="#F8FAF9" CornerRadius="8" Padding="10" Margin="0,4"><StackPanel Spacing="4"><StackPanel Orientation="Horizontal" Spacing="7"><TextBlock Text="{Binding RuleId}" Foreground="#C1493D" FontWeight="Bold" FontSize="11"/><TextBlock Text="{Binding SeverityLabel}" Foreground="#A36713" FontSize="10" FontWeight="Bold"/></StackPanel><TextBlock Text="{Binding Message}" FontSize="11" TextWrapping="Wrap"/><TextBlock Text="{Binding ObjectId}" Classes="muted" FontSize="10"/><TextBlock Text="{Binding Reference}" Foreground="#946326" TextWrapping="Wrap" FontSize="10"/></StackPanel></Border></DataTemplate></ListBox.ItemTemplate></ListBox></TabItem>
+            <TabItem Header="Легенда" FontSize="12"><ListBox Background="Transparent" BorderThickness="0" ItemsSource="{Binding Legend.Entries}"><ListBox.ItemTemplate><DataTemplate><StackPanel Margin="4,7" Spacing="2"><TextBlock Text="{Binding Key}" FontWeight="Bold" FontSize="11" Foreground="#087D5B"/><TextBlock Text="{Binding Description}" TextWrapping="Wrap" FontSize="11"/></StackPanel></DataTemplate></ListBox.ItemTemplate></ListBox></TabItem>
+            <TabItem Header="Проверить" FontSize="12"><ListBox Background="Transparent" BorderThickness="0" ItemsSource="{Binding Inspector.ManualActions}"><ListBox.ItemTemplate><DataTemplate><TextBlock Text="{Binding}" TextWrapping="Wrap" Margin="4,7" FontSize="11"/></DataTemplate></ListBox.ItemTemplate></ListBox></TabItem>
+          </TabControl>
+          <Border Grid.Row="3" Background="#FFF7E8" CornerRadius="8" Padding="10" Margin="0,10,0,0"><TextBlock Text="{Binding Inspector.Status}" Foreground="#946326" TextWrapping="Wrap" FontSize="11"/></Border>
+        </Grid>
+      </Border>
+    </Grid>
+  </Grid>
+</Window>

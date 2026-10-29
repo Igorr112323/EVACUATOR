@@ -1,0 +1,38 @@
+{
+  "signs": [
+    {
+      "code": "E99",
+      "name": "Пользовательский учебный знак",
+      "officialDescription": "Пользовательский учебный знак",
+      "category": "E",
+      "shape": "Square",
+      "aspectRatio": 1,
+      "minHeightMm": 8,
+      "maxHeightMm": 15,
+      "defaultHeightMm": 10,
+      "gostClauseRef": "[ПРОВЕРИТЬ ПО ТЕКСТУ ГОСТ] Пользовательский код не является заявлением о соответствии стандарту.",
+      "backgroundColor": "#008855",
+      "isExit": false,
+      "primitives": [
+        {
+          "type": "Text",
+          "x": 0.3,
+          "y": 0.39,
+          "text": "?",
+          "fontSize": 0.3,
+          "fill": "#FFFFFF"
+        },
+        {
+          "type": "Arc",
+          "x": 0.5,
+          "y": 0.5,
+          "radius": 0.35,
+          "startAngleDegrees": 0,
+          "sweepAngleDegrees": 270,
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.035
+        }
+      ]
+    }
+  ]
+}

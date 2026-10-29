@@ -1,0 +1,463 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/evakuator/gost_12_4_026_2015.schema.json",
+  "title": "Evakuator demonstration norms — verify against official sources",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "notice",
+    "parameters",
+    "fireInstructionTemplate",
+    "signs"
+  ],
+  "properties": {
+    "version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "notice": {
+      "type": "string",
+      "minLength": 1
+    },
+    "parameters": {
+      "$ref": "#/$defs/parameters"
+    },
+    "fireInstructionTemplate": {
+      "$ref": "#/$defs/instruction"
+    },
+    "signs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/sign"
+      }
+    }
+  },
+  "$defs": {
+    "paint": {
+      "type": "string",
+      "pattern": "^(none|#[0-9a-fA-F]{6})$"
+    },
+    "color": {
+      "type": "string",
+      "pattern": "^#[0-9a-fA-F]{6}$"
+    },
+    "unit": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "point": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "x",
+        "y"
+      ],
+      "properties": {
+        "x": {
+          "$ref": "#/$defs/unit"
+        },
+        "y": {
+          "$ref": "#/$defs/unit"
+        }
+      }
+    },
+    "primitive": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type"
+      ],
+      "properties": {
+        "type": {
+          "enum": [
+            "Rect",
+            "Circle",
+            "Polygon",
+            "Polyline",
+            "Text",
+            "Arc"
+          ]
+        },
+        "points": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/point"
+          }
+        },
+        "x": {
+          "$ref": "#/$defs/unit"
+        },
+        "y": {
+          "$ref": "#/$defs/unit"
+        },
+        "width": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 1
+        },
+        "height": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 1
+        },
+        "radius": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 1
+        },
+        "strokeWidth": {
+          "$ref": "#/$defs/unit"
+        },
+        "fontSize": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 1
+        },
+        "fill": {
+          "$ref": "#/$defs/paint"
+        },
+        "stroke": {
+          "$ref": "#/$defs/paint"
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "startAngleDegrees": {
+          "type": "number",
+          "minimum": 0,
+          "exclusiveMaximum": 360
+        },
+        "sweepAngleDegrees": {
+          "type": "number",
+          "exclusiveMinimum": -360,
+          "exclusiveMaximum": 360,
+          "not": {
+            "const": 0
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "Rect"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "x",
+              "y",
+              "width",
+              "height"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "Circle"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "x",
+              "y",
+              "radius"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "Polygon"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "points"
+            ],
+            "properties": {
+              "points": {
+                "minItems": 3
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "Polyline"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "points"
+            ],
+            "properties": {
+              "points": {
+                "minItems": 2
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "Text"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "x",
+              "y",
+              "text",
+              "fontSize"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "Arc"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "x",
+              "y",
+              "radius",
+              "startAngleDegrees",
+              "sweepAngleDegrees",
+              "stroke",
+              "strokeWidth"
+            ],
+            "properties": {
+              "fill": {
+                "const": "none"
+              },
+              "stroke": {
+                "$ref": "#/$defs/color"
+              },
+              "strokeWidth": {
+                "type": "number",
+                "exclusiveMinimum": 0,
+                "maximum": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    "sign": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "code",
+        "name",
+        "officialDescription",
+        "category",
+        "shape",
+        "aspectRatio",
+        "minHeightMm",
+        "maxHeightMm",
+        "defaultHeightMm",
+        "gostClauseRef",
+        "backgroundColor",
+        "isExit",
+        "primitives"
+      ],
+      "properties": {
+        "code": {
+          "type": "string",
+          "pattern": "^(E|F|EC|P|W)[0-9]{2}(-[0-9]{2})?$"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "officialDescription": {
+          "type": "string",
+          "minLength": 1
+        },
+        "category": {
+          "enum": [
+            "E",
+            "F",
+            "EC",
+            "P",
+            "W"
+          ]
+        },
+        "shape": {
+          "enum": [
+            "Square",
+            "Rectangle2x1",
+            "CircleSlash",
+            "EquilateralTriangle"
+          ]
+        },
+        "aspectRatio": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "minHeightMm": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "maxHeightMm": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "defaultHeightMm": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "gostClauseRef": {
+          "type": "string",
+          "pattern": "\\[ПРОВЕРИТЬ ПО ТЕКСТУ ГОСТ\\]"
+        },
+        "backgroundColor": {
+          "$ref": "#/$defs/color"
+        },
+        "isExit": {
+          "type": "boolean"
+        },
+        "primitives": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/primitive"
+          }
+        }
+      }
+    },
+    "parameters": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "defaultHeightMm",
+        "uniformToleranceMm",
+        "snapToleranceMm",
+        "maxAutoSnapDistanceMm",
+        "pathLineWeightMm",
+        "pathColor",
+        "arrowSpacingMm",
+        "arrowSizeMm",
+        "overlapThreshold",
+        "offsetStepMm",
+        "maxOffsetSteps",
+        "duplicateToleranceMm",
+        "floorFrameWidthMm",
+        "floorFrameHeightMm",
+        "localFrameWidthMm",
+        "localFrameHeightMm"
+      ],
+      "properties": {
+        "defaultHeightMm": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "uniformToleranceMm": {
+          "type": "number",
+          "minimum": 0
+        },
+        "snapToleranceMm": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "maxAutoSnapDistanceMm": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "pathLineWeightMm": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "pathColor": {
+          "$ref": "#/$defs/color"
+        },
+        "arrowSpacingMm": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "arrowSizeMm": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "overlapThreshold": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "offsetStepMm": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "maxOffsetSteps": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1000
+        },
+        "duplicateToleranceMm": {
+          "type": "number",
+          "minimum": 0
+        },
+        "floorFrameWidthMm": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "floorFrameHeightMm": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "localFrameWidthMm": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "localFrameHeightMm": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        }
+      }
+    },
+    "instruction": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "approval",
+        "title",
+        "instructions"
+      ],
+      "properties": {
+        "approval": {
+          "type": "string",
+          "minLength": 1
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "instructions": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}

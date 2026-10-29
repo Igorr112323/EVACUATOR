@@ -1,0 +1,2769 @@
+{
+  "version": "0.1-demo",
+  "notice": "[ПРОВЕРИТЬ ПО ТЕКСТУ ГОСТ] Учебные схематичные пиктограммы и параметры; не являются официальной нормативной базой.",
+  "parameters": {
+    "defaultHeightMm": 10,
+    "uniformToleranceMm": 0.01,
+    "snapToleranceMm": 250,
+    "maxAutoSnapDistanceMm": 3500,
+    "pathLineWeightMm": 0.5,
+    "pathColor": "#008855",
+    "arrowSpacingMm": 3500,
+    "arrowSizeMm": 500,
+    "overlapThreshold": 0.15,
+    "offsetStepMm": 250,
+    "maxOffsetSteps": 80,
+    "duplicateToleranceMm": 1,
+    "floorFrameWidthMm": 600,
+    "floorFrameHeightMm": 400,
+    "localFrameWidthMm": 400,
+    "localFrameHeightMm": 300
+  },
+  "fireInstructionTemplate": {
+    "approval": "УТВЕРЖДАЮ",
+    "title": "ПЛАН ЭВАКУАЦИИ при пожаре",
+    "instructions": "При обнаружении пожара сообщите по телефонам 101 и 112, предупредите людей, покиньте здание по указанным путям и следуйте указаниям ответственных лиц. Не пользуйтесь лифтом."
+  },
+  "signs": [
+    {
+      "code": "E01-01",
+      "name": "Выход здесь (левосторонний)",
+      "officialDescription": "Выход здесь (левосторонний)",
+      "category": "E",
+      "shape": "Square",
+      "aspectRatio": 1,
+      "minHeightMm": 8,
+      "maxHeightMm": 15,
+      "defaultHeightMm": 10,
+      "gostClauseRef": "[ПРОВЕРИТЬ ПО ТЕКСТУ ГОСТ] Код, назначение, изображение и размер не сверены с официальным текстом.",
+      "backgroundColor": "#008855",
+      "isExit": true,
+      "primitives": [
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.83,
+              "y": 0.15
+            },
+            {
+              "x": 0.83,
+              "y": 0.84
+            },
+            {
+              "x": 0.22,
+              "y": 0.84
+            },
+            {
+              "x": 0.22,
+              "y": 0.15
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.045
+        },
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.75,
+              "y": 0.18
+            },
+            {
+              "x": 0.75,
+              "y": 0.78
+            },
+            {
+              "x": 0.63,
+              "y": 0.78
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.035
+        },
+        {
+          "type": "Circle",
+          "x": 0.54,
+          "y": 0.73,
+          "radius": 0.065,
+          "fill": "#FFFFFF"
+        },
+        {
+          "type": "Polygon",
+          "points": [
+            {
+              "x": 0.59,
+              "y": 0.64
+            },
+            {
+              "x": 0.48,
+              "y": 0.6
+            },
+            {
+              "x": 0.43,
+              "y": 0.49
+            },
+            {
+              "x": 0.52,
+              "y": 0.44
+            },
+            {
+              "x": 0.61,
+              "y": 0.53
+            }
+          ],
+          "fill": "#FFFFFF"
+        },
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.57,
+              "y": 0.56
+            },
+            {
+              "x": 0.68,
+              "y": 0.48
+            },
+            {
+              "x": 0.77,
+              "y": 0.51
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.055
+        },
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.48,
+              "y": 0.58
+            },
+            {
+              "x": 0.39,
+              "y": 0.52
+            },
+            {
+              "x": 0.32,
+              "y": 0.56
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.055
+        },
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.53,
+              "y": 0.45
+            },
+            {
+              "x": 0.63,
+              "y": 0.31
+            },
+            {
+              "x": 0.72,
+              "y": 0.25
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.065
+        },
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.5,
+              "y": 0.45
+            },
+            {
+              "x": 0.41,
+              "y": 0.34
+            },
+            {
+              "x": 0.3,
+              "y": 0.3
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.065
+        }
+      ]
+    },
+    {
+      "code": "E01-02",
+      "name": "Выход здесь (правосторонний)",
+      "officialDescription": "Выход здесь (правосторонний)",
+      "category": "E",
+      "shape": "Square",
+      "aspectRatio": 1,
+      "minHeightMm": 8,
+      "maxHeightMm": 15,
+      "defaultHeightMm": 10,
+      "gostClauseRef": "[ПРОВЕРИТЬ ПО ТЕКСТУ ГОСТ] Код, назначение, изображение и размер не сверены с официальным текстом.",
+      "backgroundColor": "#008855",
+      "isExit": true,
+      "primitives": [
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.17,
+              "y": 0.15
+            },
+            {
+              "x": 0.17,
+              "y": 0.84
+            },
+            {
+              "x": 0.78,
+              "y": 0.84
+            },
+            {
+              "x": 0.78,
+              "y": 0.15
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.045
+        },
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.25,
+              "y": 0.18
+            },
+            {
+              "x": 0.25,
+              "y": 0.78
+            },
+            {
+              "x": 0.37,
+              "y": 0.78
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.035
+        },
+        {
+          "type": "Circle",
+          "x": 0.46,
+          "y": 0.73,
+          "radius": 0.065,
+          "fill": "#FFFFFF"
+        },
+        {
+          "type": "Polygon",
+          "points": [
+            {
+              "x": 0.41,
+              "y": 0.64
+            },
+            {
+              "x": 0.52,
+              "y": 0.6
+            },
+            {
+              "x": 0.57,
+              "y": 0.49
+            },
+            {
+              "x": 0.48,
+              "y": 0.44
+            },
+            {
+              "x": 0.39,
+              "y": 0.53
+            }
+          ],
+          "fill": "#FFFFFF"
+        },
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.43,
+              "y": 0.56
+            },
+            {
+              "x": 0.32,
+              "y": 0.48
+            },
+            {
+              "x": 0.23,
+              "y": 0.51
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.055
+        },
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.52,
+              "y": 0.58
+            },
+            {
+              "x": 0.61,
+              "y": 0.52
+            },
+            {
+              "x": 0.68,
+              "y": 0.56
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.055
+        },
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.47,
+              "y": 0.45
+            },
+            {
+              "x": 0.37,
+              "y": 0.31
+            },
+            {
+              "x": 0.28,
+              "y": 0.25
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.065
+        },
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.5,
+              "y": 0.45
+            },
+            {
+              "x": 0.59,
+              "y": 0.34
+            },
+            {
+              "x": 0.7,
+              "y": 0.3
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.065
+        }
+      ]
+    },
+    {
+      "code": "E02-01",
+      "name": "Направляющая стрелка вправо",
+      "officialDescription": "Направляющая стрелка вправо",
+      "category": "E",
+      "shape": "Square",
+      "aspectRatio": 1,
+      "minHeightMm": 8,
+      "maxHeightMm": 15,
+      "defaultHeightMm": 10,
+      "gostClauseRef": "[ПРОВЕРИТЬ ПО ТЕКСТУ ГОСТ] Код, назначение, изображение и размер не сверены с официальным текстом.",
+      "backgroundColor": "#008855",
+      "isExit": false,
+      "primitives": [
+        {
+          "type": "Polygon",
+          "points": [
+            {
+              "x": 0.175,
+              "y": 0.43
+            },
+            {
+              "x": 0.565,
+              "y": 0.43
+            },
+            {
+              "x": 0.565,
+              "y": 0.36
+            },
+            {
+              "x": 0.825,
+              "y": 0.5
+            },
+            {
+              "x": 0.565,
+              "y": 0.64
+            },
+            {
+              "x": 0.565,
+              "y": 0.57
+            },
+            {
+              "x": 0.175,
+              "y": 0.57
+            }
+          ],
+          "fill": "#FFFFFF"
+        }
+      ]
+    },
+    {
+      "code": "E02-02",
+      "name": "Направляющая стрелка под углом 45°",
+      "officialDescription": "Направляющая стрелка под углом 45°",
+      "category": "E",
+      "shape": "Square",
+      "aspectRatio": 1,
+      "minHeightMm": 8,
+      "maxHeightMm": 15,
+      "defaultHeightMm": 10,
+      "gostClauseRef": "[ПРОВЕРИТЬ ПО ТЕКСТУ ГОСТ] Код, назначение, изображение и размер не сверены с официальным текстом.",
+      "backgroundColor": "#008855",
+      "isExit": false,
+      "primitives": [
+        {
+          "type": "Polygon",
+          "points": [
+            {
+              "x": 0.3197,
+              "y": 0.2207
+            },
+            {
+              "x": 0.5955,
+              "y": 0.4965
+            },
+            {
+              "x": 0.645,
+              "y": 0.447
+            },
+            {
+              "x": 0.7298,
+              "y": 0.7298
+            },
+            {
+              "x": 0.447,
+              "y": 0.645
+            },
+            {
+              "x": 0.4965,
+              "y": 0.5955
+            },
+            {
+              "x": 0.2207,
+              "y": 0.3197
+            }
+          ],
+          "fill": "#FFFFFF"
+        }
+      ]
+    },
+    {
+      "code": "E03",
+      "name": "Направление к эвакуационному выходу направо",
+      "officialDescription": "Направление к эвакуационному выходу направо",
+      "category": "E",
+      "shape": "Square",
+      "aspectRatio": 1,
+      "minHeightMm": 8,
+      "maxHeightMm": 15,
+      "defaultHeightMm": 10,
+      "gostClauseRef": "[ПРОВЕРИТЬ ПО ТЕКСТУ ГОСТ] Код, назначение, изображение и размер не сверены с официальным текстом.",
+      "backgroundColor": "#008855",
+      "isExit": false,
+      "primitives": [
+        {
+          "type": "Circle",
+          "x": 0.33,
+          "y": 0.72,
+          "radius": 0.055,
+          "fill": "#FFFFFF"
+        },
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.33,
+              "y": 0.64
+            },
+            {
+              "x": 0.39,
+              "y": 0.5
+            },
+            {
+              "x": 0.32,
+              "y": 0.38
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.075
+        },
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.37,
+              "y": 0.58
+            },
+            {
+              "x": 0.24,
+              "y": 0.49
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.04
+        },
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.32,
+              "y": 0.38
+            },
+            {
+              "x": 0.21,
+              "y": 0.23
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.055
+        },
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.32,
+              "y": 0.38
+            },
+            {
+              "x": 0.43,
+              "y": 0.25
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.055
+        },
+        {
+          "type": "Polygon",
+          "points": [
+            {
+              "x": 0.51,
+              "y": 0.49
+            },
+            {
+              "x": 0.738,
+              "y": 0.49
+            },
+            {
+              "x": 0.738,
+              "y": 0.45
+            },
+            {
+              "x": 0.89,
+              "y": 0.53
+            },
+            {
+              "x": 0.738,
+              "y": 0.61
+            },
+            {
+              "x": 0.738,
+              "y": 0.57
+            },
+            {
+              "x": 0.51,
+              "y": 0.57
+            }
+          ],
+          "fill": "#FFFFFF"
+        }
+      ]
+    },
+    {
+      "code": "E04",
+      "name": "Направление к эвакуационному выходу налево",
+      "officialDescription": "Направление к эвакуационному выходу налево",
+      "category": "E",
+      "shape": "Square",
+      "aspectRatio": 1,
+      "minHeightMm": 8,
+      "maxHeightMm": 15,
+      "defaultHeightMm": 10,
+      "gostClauseRef": "[ПРОВЕРИТЬ ПО ТЕКСТУ ГОСТ] Код, назначение, изображение и размер не сверены с официальным текстом.",
+      "backgroundColor": "#008855",
+      "isExit": false,
+      "primitives": [
+        {
+          "type": "Circle",
+          "x": 0.67,
+          "y": 0.72,
+          "radius": 0.055,
+          "fill": "#FFFFFF"
+        },
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.67,
+              "y": 0.64
+            },
+            {
+              "x": 0.61,
+              "y": 0.5
+            },
+            {
+              "x": 0.68,
+              "y": 0.38
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.075
+        },
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.63,
+              "y": 0.58
+            },
+            {
+              "x": 0.76,
+              "y": 0.49
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.04
+        },
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.68,
+              "y": 0.38
+            },
+            {
+              "x": 0.79,
+              "y": 0.23
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.055
+        },
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.68,
+              "y": 0.38
+            },
+            {
+              "x": 0.57,
+              "y": 0.25
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.055
+        },
+        {
+          "type": "Polygon",
+          "points": [
+            {
+              "x": 0.49,
+              "y": 0.49
+            },
+            {
+              "x": 0.262,
+              "y": 0.49
+            },
+            {
+              "x": 0.262,
+              "y": 0.45
+            },
+            {
+              "x": 0.11,
+              "y": 0.53
+            },
+            {
+              "x": 0.262,
+              "y": 0.61
+            },
+            {
+              "x": 0.262,
+              "y": 0.57
+            },
+            {
+              "x": 0.49,
+              "y": 0.57
+            }
+          ],
+          "fill": "#FFFFFF"
+        }
+      ]
+    },
+    {
+      "code": "E05",
+      "name": "Направление вверх по лестнице направо",
+      "officialDescription": "Направление вверх по лестнице направо",
+      "category": "E",
+      "shape": "Square",
+      "aspectRatio": 1,
+      "minHeightMm": 8,
+      "maxHeightMm": 15,
+      "defaultHeightMm": 10,
+      "gostClauseRef": "[ПРОВЕРИТЬ ПО ТЕКСТУ ГОСТ] Код, назначение, изображение и размер не сверены с официальным текстом.",
+      "backgroundColor": "#008855",
+      "isExit": false,
+      "primitives": [
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.12,
+              "y": 0.22
+            },
+            {
+              "x": 0.28,
+              "y": 0.22
+            },
+            {
+              "x": 0.28,
+              "y": 0.34
+            },
+            {
+              "x": 0.44,
+              "y": 0.34
+            },
+            {
+              "x": 0.44,
+              "y": 0.46
+            },
+            {
+              "x": 0.6,
+              "y": 0.46
+            },
+            {
+              "x": 0.6,
+              "y": 0.58
+            },
+            {
+              "x": 0.76,
+              "y": 0.58
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.045
+        },
+        {
+          "type": "Polygon",
+          "points": [
+            {
+              "x": 0.3686,
+              "y": 0.4827
+            },
+            {
+              "x": 0.5299,
+              "y": 0.6439
+            },
+            {
+              "x": 0.5528,
+              "y": 0.6209
+            },
+            {
+              "x": 0.6144,
+              "y": 0.7744
+            },
+            {
+              "x": 0.4609,
+              "y": 0.7128
+            },
+            {
+              "x": 0.4839,
+              "y": 0.6899
+            },
+            {
+              "x": 0.3227,
+              "y": 0.5286
+            }
+          ],
+          "fill": "#FFFFFF"
+        }
+      ]
+    },
+    {
+      "code": "E06",
+      "name": "Направление вниз по лестнице направо",
+      "officialDescription": "Направление вниз по лестнице направо",
+      "category": "E",
+      "shape": "Square",
+      "aspectRatio": 1,
+      "minHeightMm": 8,
+      "maxHeightMm": 15,
+      "defaultHeightMm": 10,
+      "gostClauseRef": "[ПРОВЕРИТЬ ПО ТЕКСТУ ГОСТ] Код, назначение, изображение и размер не сверены с официальным текстом.",
+      "backgroundColor": "#008855",
+      "isExit": false,
+      "primitives": [
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.12,
+              "y": 0.22
+            },
+            {
+              "x": 0.28,
+              "y": 0.22
+            },
+            {
+              "x": 0.28,
+              "y": 0.34
+            },
+            {
+              "x": 0.44,
+              "y": 0.34
+            },
+            {
+              "x": 0.44,
+              "y": 0.46
+            },
+            {
+              "x": 0.6,
+              "y": 0.46
+            },
+            {
+              "x": 0.6,
+              "y": 0.58
+            },
+            {
+              "x": 0.76,
+              "y": 0.58
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.045
+        },
+        {
+          "type": "Polygon",
+          "points": [
+            {
+              "x": 0.3227,
+              "y": 0.7514
+            },
+            {
+              "x": 0.4839,
+              "y": 0.5901
+            },
+            {
+              "x": 0.4609,
+              "y": 0.5672
+            },
+            {
+              "x": 0.6144,
+              "y": 0.5056
+            },
+            {
+              "x": 0.5528,
+              "y": 0.6591
+            },
+            {
+              "x": 0.5299,
+              "y": 0.6361
+            },
+            {
+              "x": 0.3686,
+              "y": 0.7973
+            }
+          ],
+          "fill": "#FFFFFF"
+        }
+      ]
+    },
+    {
+      "code": "E07",
+      "name": "Направление вверх по лестнице налево",
+      "officialDescription": "Направление вверх по лестнице налево",
+      "category": "E",
+      "shape": "Square",
+      "aspectRatio": 1,
+      "minHeightMm": 8,
+      "maxHeightMm": 15,
+      "defaultHeightMm": 10,
+      "gostClauseRef": "[ПРОВЕРИТЬ ПО ТЕКСТУ ГОСТ] Код, назначение, изображение и размер не сверены с официальным текстом.",
+      "backgroundColor": "#008855",
+      "isExit": false,
+      "primitives": [
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.88,
+              "y": 0.22
+            },
+            {
+              "x": 0.72,
+              "y": 0.22
+            },
+            {
+              "x": 0.72,
+              "y": 0.34
+            },
+            {
+              "x": 0.56,
+              "y": 0.34
+            },
+            {
+              "x": 0.56,
+              "y": 0.46
+            },
+            {
+              "x": 0.4,
+              "y": 0.46
+            },
+            {
+              "x": 0.4,
+              "y": 0.58
+            },
+            {
+              "x": 0.24,
+              "y": 0.58
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.045
+        },
+        {
+          "type": "Polygon",
+          "points": [
+            {
+              "x": 0.6314,
+              "y": 0.4827
+            },
+            {
+              "x": 0.4701,
+              "y": 0.6439
+            },
+            {
+              "x": 0.4472,
+              "y": 0.6209
+            },
+            {
+              "x": 0.3856,
+              "y": 0.7744
+            },
+            {
+              "x": 0.5391,
+              "y": 0.7128
+            },
+            {
+              "x": 0.5161,
+              "y": 0.6899
+            },
+            {
+              "x": 0.6773,
+              "y": 0.5286
+            }
+          ],
+          "fill": "#FFFFFF"
+        }
+      ]
+    },
+    {
+      "code": "E08",
+      "name": "Направление вниз по лестнице налево",
+      "officialDescription": "Направление вниз по лестнице налево",
+      "category": "E",
+      "shape": "Square",
+      "aspectRatio": 1,
+      "minHeightMm": 8,
+      "maxHeightMm": 15,
+      "defaultHeightMm": 10,
+      "gostClauseRef": "[ПРОВЕРИТЬ ПО ТЕКСТУ ГОСТ] Код, назначение, изображение и размер не сверены с официальным текстом.",
+      "backgroundColor": "#008855",
+      "isExit": false,
+      "primitives": [
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.88,
+              "y": 0.22
+            },
+            {
+              "x": 0.72,
+              "y": 0.22
+            },
+            {
+              "x": 0.72,
+              "y": 0.34
+            },
+            {
+              "x": 0.56,
+              "y": 0.34
+            },
+            {
+              "x": 0.56,
+              "y": 0.46
+            },
+            {
+              "x": 0.4,
+              "y": 0.46
+            },
+            {
+              "x": 0.4,
+              "y": 0.58
+            },
+            {
+              "x": 0.24,
+              "y": 0.58
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.045
+        },
+        {
+          "type": "Polygon",
+          "points": [
+            {
+              "x": 0.6773,
+              "y": 0.7514
+            },
+            {
+              "x": 0.5161,
+              "y": 0.5901
+            },
+            {
+              "x": 0.5391,
+              "y": 0.5672
+            },
+            {
+              "x": 0.3856,
+              "y": 0.5056
+            },
+            {
+              "x": 0.4472,
+              "y": 0.6591
+            },
+            {
+              "x": 0.4701,
+              "y": 0.6361
+            },
+            {
+              "x": 0.6314,
+              "y": 0.7973
+            }
+          ],
+          "fill": "#FFFFFF"
+        }
+      ]
+    },
+    {
+      "code": "E09",
+      "name": "Дверь эвакуационного выхода",
+      "officialDescription": "Дверь эвакуационного выхода",
+      "category": "E",
+      "shape": "Square",
+      "aspectRatio": 1,
+      "minHeightMm": 8,
+      "maxHeightMm": 15,
+      "defaultHeightMm": 10,
+      "gostClauseRef": "[ПРОВЕРИТЬ ПО ТЕКСТУ ГОСТ] Код, назначение, изображение и размер не сверены с официальным текстом.",
+      "backgroundColor": "#008855",
+      "isExit": true,
+      "primitives": [
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.24,
+              "y": 0.15
+            },
+            {
+              "x": 0.24,
+              "y": 0.85
+            },
+            {
+              "x": 0.75,
+              "y": 0.85
+            },
+            {
+              "x": 0.75,
+              "y": 0.15
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.06
+        },
+        {
+          "type": "Circle",
+          "x": 0.65,
+          "y": 0.5,
+          "radius": 0.035,
+          "fill": "#FFFFFF"
+        },
+        {
+          "type": "Polygon",
+          "points": [
+            {
+              "x": 0.505,
+              "y": 0.305
+            },
+            {
+              "x": 0.505,
+              "y": 0.527
+            },
+            {
+              "x": 0.54,
+              "y": 0.527
+            },
+            {
+              "x": 0.47,
+              "y": 0.675
+            },
+            {
+              "x": 0.4,
+              "y": 0.527
+            },
+            {
+              "x": 0.435,
+              "y": 0.527
+            },
+            {
+              "x": 0.435,
+              "y": 0.305
+            }
+          ],
+          "fill": "#FFFFFF"
+        }
+      ]
+    },
+    {
+      "code": "E10",
+      "name": "Запасной выход",
+      "officialDescription": "Запасной выход",
+      "category": "E",
+      "shape": "Square",
+      "aspectRatio": 1,
+      "minHeightMm": 8,
+      "maxHeightMm": 15,
+      "defaultHeightMm": 10,
+      "gostClauseRef": "[ПРОВЕРИТЬ ПО ТЕКСТУ ГОСТ] Код, назначение, изображение и размер не сверены с официальным текстом.",
+      "backgroundColor": "#008855",
+      "isExit": true,
+      "primitives": [
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.17,
+              "y": 0.15
+            },
+            {
+              "x": 0.17,
+              "y": 0.84
+            },
+            {
+              "x": 0.78,
+              "y": 0.84
+            },
+            {
+              "x": 0.78,
+              "y": 0.15
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.045
+        },
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.25,
+              "y": 0.18
+            },
+            {
+              "x": 0.25,
+              "y": 0.78
+            },
+            {
+              "x": 0.37,
+              "y": 0.78
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.035
+        },
+        {
+          "type": "Circle",
+          "x": 0.46,
+          "y": 0.73,
+          "radius": 0.065,
+          "fill": "#FFFFFF"
+        },
+        {
+          "type": "Polygon",
+          "points": [
+            {
+              "x": 0.41,
+              "y": 0.64
+            },
+            {
+              "x": 0.52,
+              "y": 0.6
+            },
+            {
+              "x": 0.57,
+              "y": 0.49
+            },
+            {
+              "x": 0.48,
+              "y": 0.44
+            },
+            {
+              "x": 0.39,
+              "y": 0.53
+            }
+          ],
+          "fill": "#FFFFFF"
+        },
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.43,
+              "y": 0.56
+            },
+            {
+              "x": 0.32,
+              "y": 0.48
+            },
+            {
+              "x": 0.23,
+              "y": 0.51
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.055
+        },
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.52,
+              "y": 0.58
+            },
+            {
+              "x": 0.61,
+              "y": 0.52
+            },
+            {
+              "x": 0.68,
+              "y": 0.56
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.055
+        },
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.47,
+              "y": 0.45
+            },
+            {
+              "x": 0.37,
+              "y": 0.31
+            },
+            {
+              "x": 0.28,
+              "y": 0.25
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.065
+        },
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.5,
+              "y": 0.45
+            },
+            {
+              "x": 0.59,
+              "y": 0.34
+            },
+            {
+              "x": 0.7,
+              "y": 0.3
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.065
+        },
+        {
+          "type": "Polygon",
+          "points": [
+            {
+              "x": 0.59,
+              "y": 0.1925
+            },
+            {
+              "x": 0.758,
+              "y": 0.1925
+            },
+            {
+              "x": 0.758,
+              "y": 0.165
+            },
+            {
+              "x": 0.87,
+              "y": 0.22
+            },
+            {
+              "x": 0.758,
+              "y": 0.275
+            },
+            {
+              "x": 0.758,
+              "y": 0.2475
+            },
+            {
+              "x": 0.59,
+              "y": 0.2475
+            }
+          ],
+          "fill": "#FFFFFF"
+        }
+      ]
+    },
+    {
+      "code": "E11",
+      "name": "Направление к эвакуационному выходу прямо",
+      "officialDescription": "Направление к эвакуационному выходу прямо",
+      "category": "E",
+      "shape": "Square",
+      "aspectRatio": 1,
+      "minHeightMm": 8,
+      "maxHeightMm": 15,
+      "defaultHeightMm": 10,
+      "gostClauseRef": "[ПРОВЕРИТЬ ПО ТЕКСТУ ГОСТ] Код, назначение, изображение и размер не сверены с официальным текстом.",
+      "backgroundColor": "#008855",
+      "isExit": false,
+      "primitives": [
+        {
+          "type": "Circle",
+          "x": 0.33,
+          "y": 0.72,
+          "radius": 0.055,
+          "fill": "#FFFFFF"
+        },
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.33,
+              "y": 0.64
+            },
+            {
+              "x": 0.39,
+              "y": 0.5
+            },
+            {
+              "x": 0.32,
+              "y": 0.38
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.075
+        },
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.37,
+              "y": 0.58
+            },
+            {
+              "x": 0.24,
+              "y": 0.49
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.04
+        },
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.32,
+              "y": 0.38
+            },
+            {
+              "x": 0.21,
+              "y": 0.23
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.055
+        },
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.32,
+              "y": 0.38
+            },
+            {
+              "x": 0.43,
+              "y": 0.25
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.055
+        },
+        {
+          "type": "Polygon",
+          "points": [
+            {
+              "x": 0.72,
+              "y": 0.3
+            },
+            {
+              "x": 0.72,
+              "y": 0.576
+            },
+            {
+              "x": 0.76,
+              "y": 0.576
+            },
+            {
+              "x": 0.68,
+              "y": 0.76
+            },
+            {
+              "x": 0.6,
+              "y": 0.576
+            },
+            {
+              "x": 0.64,
+              "y": 0.576
+            },
+            {
+              "x": 0.64,
+              "y": 0.3
+            }
+          ],
+          "fill": "#FFFFFF"
+        }
+      ]
+    },
+    {
+      "code": "E13",
+      "name": "Направление по лестнице вниз",
+      "officialDescription": "Направление по лестнице вниз",
+      "category": "E",
+      "shape": "Square",
+      "aspectRatio": 1,
+      "minHeightMm": 8,
+      "maxHeightMm": 15,
+      "defaultHeightMm": 10,
+      "gostClauseRef": "[ПРОВЕРИТЬ ПО ТЕКСТУ ГОСТ] Код, назначение, изображение и размер не сверены с официальным текстом.",
+      "backgroundColor": "#008855",
+      "isExit": false,
+      "primitives": [
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.12,
+              "y": 0.22
+            },
+            {
+              "x": 0.28,
+              "y": 0.22
+            },
+            {
+              "x": 0.28,
+              "y": 0.34
+            },
+            {
+              "x": 0.44,
+              "y": 0.34
+            },
+            {
+              "x": 0.44,
+              "y": 0.46
+            },
+            {
+              "x": 0.6,
+              "y": 0.46
+            },
+            {
+              "x": 0.6,
+              "y": 0.58
+            },
+            {
+              "x": 0.76,
+              "y": 0.58
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.045
+        },
+        {
+          "type": "Polygon",
+          "points": [
+            {
+              "x": 0.3227,
+              "y": 0.7514
+            },
+            {
+              "x": 0.4839,
+              "y": 0.5901
+            },
+            {
+              "x": 0.4609,
+              "y": 0.5672
+            },
+            {
+              "x": 0.6144,
+              "y": 0.5056
+            },
+            {
+              "x": 0.5528,
+              "y": 0.6591
+            },
+            {
+              "x": 0.5299,
+              "y": 0.6361
+            },
+            {
+              "x": 0.3686,
+              "y": 0.7973
+            }
+          ],
+          "fill": "#FFFFFF"
+        },
+        {
+          "type": "Polygon",
+          "points": [
+            {
+              "x": 0.755,
+              "y": 0.475
+            },
+            {
+              "x": 0.755,
+              "y": 0.325
+            },
+            {
+              "x": 0.73,
+              "y": 0.325
+            },
+            {
+              "x": 0.78,
+              "y": 0.225
+            },
+            {
+              "x": 0.83,
+              "y": 0.325
+            },
+            {
+              "x": 0.805,
+              "y": 0.325
+            },
+            {
+              "x": 0.805,
+              "y": 0.475
+            }
+          ],
+          "fill": "#FFFFFF"
+        }
+      ]
+    },
+    {
+      "code": "E15",
+      "name": "Направление по лестнице вверх",
+      "officialDescription": "Направление по лестнице вверх",
+      "category": "E",
+      "shape": "Square",
+      "aspectRatio": 1,
+      "minHeightMm": 8,
+      "maxHeightMm": 15,
+      "defaultHeightMm": 10,
+      "gostClauseRef": "[ПРОВЕРИТЬ ПО ТЕКСТУ ГОСТ] Код, назначение, изображение и размер не сверены с официальным текстом.",
+      "backgroundColor": "#008855",
+      "isExit": false,
+      "primitives": [
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.12,
+              "y": 0.22
+            },
+            {
+              "x": 0.28,
+              "y": 0.22
+            },
+            {
+              "x": 0.28,
+              "y": 0.34
+            },
+            {
+              "x": 0.44,
+              "y": 0.34
+            },
+            {
+              "x": 0.44,
+              "y": 0.46
+            },
+            {
+              "x": 0.6,
+              "y": 0.46
+            },
+            {
+              "x": 0.6,
+              "y": 0.58
+            },
+            {
+              "x": 0.76,
+              "y": 0.58
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.045
+        },
+        {
+          "type": "Polygon",
+          "points": [
+            {
+              "x": 0.3686,
+              "y": 0.4827
+            },
+            {
+              "x": 0.5299,
+              "y": 0.6439
+            },
+            {
+              "x": 0.5528,
+              "y": 0.6209
+            },
+            {
+              "x": 0.6144,
+              "y": 0.7744
+            },
+            {
+              "x": 0.4609,
+              "y": 0.7128
+            },
+            {
+              "x": 0.4839,
+              "y": 0.6899
+            },
+            {
+              "x": 0.3227,
+              "y": 0.5286
+            }
+          ],
+          "fill": "#FFFFFF"
+        },
+        {
+          "type": "Polygon",
+          "points": [
+            {
+              "x": 0.805,
+              "y": 0.225
+            },
+            {
+              "x": 0.805,
+              "y": 0.375
+            },
+            {
+              "x": 0.83,
+              "y": 0.375
+            },
+            {
+              "x": 0.78,
+              "y": 0.475
+            },
+            {
+              "x": 0.73,
+              "y": 0.375
+            },
+            {
+              "x": 0.755,
+              "y": 0.375
+            },
+            {
+              "x": 0.755,
+              "y": 0.225
+            }
+          ],
+          "fill": "#FFFFFF"
+        }
+      ]
+    },
+    {
+      "code": "E18",
+      "name": "Открывать движением от себя",
+      "officialDescription": "Открывать движением от себя",
+      "category": "E",
+      "shape": "Square",
+      "aspectRatio": 1,
+      "minHeightMm": 8,
+      "maxHeightMm": 15,
+      "defaultHeightMm": 10,
+      "gostClauseRef": "[ПРОВЕРИТЬ ПО ТЕКСТУ ГОСТ] Код, назначение, изображение и размер не сверены с официальным текстом.",
+      "backgroundColor": "#008855",
+      "isExit": false,
+      "primitives": [
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.18,
+              "y": 0.18
+            },
+            {
+              "x": 0.18,
+              "y": 0.82
+            },
+            {
+              "x": 0.58,
+              "y": 0.82
+            },
+            {
+              "x": 0.58,
+              "y": 0.18
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.055
+        },
+        {
+          "type": "Circle",
+          "x": 0.49,
+          "y": 0.49,
+          "radius": 0.025,
+          "fill": "#FFFFFF"
+        },
+        {
+          "type": "Polygon",
+          "points": [
+            {
+              "x": 0.485,
+              "y": 0.445
+            },
+            {
+              "x": 0.695,
+              "y": 0.445
+            },
+            {
+              "x": 0.695,
+              "y": 0.41
+            },
+            {
+              "x": 0.835,
+              "y": 0.48
+            },
+            {
+              "x": 0.695,
+              "y": 0.55
+            },
+            {
+              "x": 0.695,
+              "y": 0.515
+            },
+            {
+              "x": 0.485,
+              "y": 0.515
+            }
+          ],
+          "fill": "#FFFFFF"
+        }
+      ]
+    },
+    {
+      "code": "E19",
+      "name": "Открывать движением на себя",
+      "officialDescription": "Открывать движением на себя",
+      "category": "E",
+      "shape": "Square",
+      "aspectRatio": 1,
+      "minHeightMm": 8,
+      "maxHeightMm": 15,
+      "defaultHeightMm": 10,
+      "gostClauseRef": "[ПРОВЕРИТЬ ПО ТЕКСТУ ГОСТ] Код, назначение, изображение и размер не сверены с официальным текстом.",
+      "backgroundColor": "#008855",
+      "isExit": false,
+      "primitives": [
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.18,
+              "y": 0.18
+            },
+            {
+              "x": 0.18,
+              "y": 0.82
+            },
+            {
+              "x": 0.58,
+              "y": 0.82
+            },
+            {
+              "x": 0.58,
+              "y": 0.18
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.055
+        },
+        {
+          "type": "Circle",
+          "x": 0.49,
+          "y": 0.49,
+          "radius": 0.025,
+          "fill": "#FFFFFF"
+        },
+        {
+          "type": "Polygon",
+          "points": [
+            {
+              "x": 0.835,
+              "y": 0.515
+            },
+            {
+              "x": 0.625,
+              "y": 0.515
+            },
+            {
+              "x": 0.625,
+              "y": 0.55
+            },
+            {
+              "x": 0.485,
+              "y": 0.48
+            },
+            {
+              "x": 0.625,
+              "y": 0.41
+            },
+            {
+              "x": 0.625,
+              "y": 0.445
+            },
+            {
+              "x": 0.835,
+              "y": 0.445
+            }
+          ],
+          "fill": "#FFFFFF"
+        }
+      ]
+    },
+    {
+      "code": "E21",
+      "name": "Пункт сбора",
+      "officialDescription": "Пункт сбора",
+      "category": "E",
+      "shape": "Square",
+      "aspectRatio": 1,
+      "minHeightMm": 8,
+      "maxHeightMm": 15,
+      "defaultHeightMm": 10,
+      "gostClauseRef": "[ПРОВЕРИТЬ ПО ТЕКСТУ ГОСТ] Код, назначение, изображение и размер не сверены с официальным текстом.",
+      "backgroundColor": "#008855",
+      "isExit": false,
+      "primitives": [
+        {
+          "type": "Circle",
+          "x": 0.5,
+          "y": 0.57,
+          "radius": 0.075,
+          "fill": "#FFFFFF"
+        },
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.5,
+              "y": 0.48
+            },
+            {
+              "x": 0.5,
+              "y": 0.3
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.065
+        },
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.5,
+              "y": 0.4
+            },
+            {
+              "x": 0.4,
+              "y": 0.32
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.045
+        },
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.5,
+              "y": 0.4
+            },
+            {
+              "x": 0.6,
+              "y": 0.32
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.045
+        },
+        {
+          "type": "Polygon",
+          "points": [
+            {
+              "x": 0.09,
+              "y": 0.63
+            },
+            {
+              "x": 0.234,
+              "y": 0.63
+            },
+            {
+              "x": 0.234,
+              "y": 0.61
+            },
+            {
+              "x": 0.33,
+              "y": 0.65
+            },
+            {
+              "x": 0.234,
+              "y": 0.69
+            },
+            {
+              "x": 0.234,
+              "y": 0.67
+            },
+            {
+              "x": 0.09,
+              "y": 0.67
+            }
+          ],
+          "fill": "#FFFFFF"
+        },
+        {
+          "type": "Polygon",
+          "points": [
+            {
+              "x": 0.91,
+              "y": 0.67
+            },
+            {
+              "x": 0.766,
+              "y": 0.67
+            },
+            {
+              "x": 0.766,
+              "y": 0.69
+            },
+            {
+              "x": 0.67,
+              "y": 0.65
+            },
+            {
+              "x": 0.766,
+              "y": 0.61
+            },
+            {
+              "x": 0.766,
+              "y": 0.63
+            },
+            {
+              "x": 0.91,
+              "y": 0.63
+            }
+          ],
+          "fill": "#FFFFFF"
+        },
+        {
+          "type": "Polygon",
+          "points": [
+            {
+              "x": 0.5175,
+              "y": 0.08
+            },
+            {
+              "x": 0.5175,
+              "y": 0.2
+            },
+            {
+              "x": 0.535,
+              "y": 0.2
+            },
+            {
+              "x": 0.5,
+              "y": 0.28
+            },
+            {
+              "x": 0.465,
+              "y": 0.2
+            },
+            {
+              "x": 0.4825,
+              "y": 0.2
+            },
+            {
+              "x": 0.4825,
+              "y": 0.08
+            }
+          ],
+          "fill": "#FFFFFF"
+        }
+      ]
+    },
+    {
+      "code": "E22",
+      "name": "Указатель выхода",
+      "officialDescription": "Указатель выхода",
+      "category": "E",
+      "shape": "Rectangle2x1",
+      "aspectRatio": 2,
+      "minHeightMm": 8,
+      "maxHeightMm": 15,
+      "defaultHeightMm": 10,
+      "gostClauseRef": "[ПРОВЕРИТЬ ПО ТЕКСТУ ГОСТ] Код, назначение, изображение и размер не сверены с официальным текстом.",
+      "backgroundColor": "#008855",
+      "isExit": true,
+      "primitives": [
+        {
+          "type": "Text",
+          "x": 0.14,
+          "y": 0.4,
+          "text": "ВЫХОД",
+          "fontSize": 0.22,
+          "fill": "#FFFFFF"
+        }
+      ]
+    },
+    {
+      "code": "E23",
+      "name": "Указатель запасного выхода",
+      "officialDescription": "Указатель запасного выхода",
+      "category": "E",
+      "shape": "Rectangle2x1",
+      "aspectRatio": 2,
+      "minHeightMm": 8,
+      "maxHeightMm": 15,
+      "defaultHeightMm": 10,
+      "gostClauseRef": "[ПРОВЕРИТЬ ПО ТЕКСТУ ГОСТ] Код, назначение, изображение и размер не сверены с официальным текстом.",
+      "backgroundColor": "#008855",
+      "isExit": true,
+      "primitives": [
+        {
+          "type": "Text",
+          "x": 0.08,
+          "y": 0.53,
+          "text": "ЗАПАСНЫЙ",
+          "fontSize": 0.14,
+          "fill": "#FFFFFF"
+        },
+        {
+          "type": "Text",
+          "x": 0.25,
+          "y": 0.32,
+          "text": "ВЫХОД",
+          "fontSize": 0.15,
+          "fill": "#FFFFFF"
+        }
+      ]
+    },
+    {
+      "code": "F01-01",
+      "name": "Направляющая стрелка пожарной безопасности",
+      "officialDescription": "Направляющая стрелка пожарной безопасности",
+      "category": "F",
+      "shape": "Square",
+      "aspectRatio": 1,
+      "minHeightMm": 8,
+      "maxHeightMm": 15,
+      "defaultHeightMm": 10,
+      "gostClauseRef": "[ПРОВЕРИТЬ ПО ТЕКСТУ ГОСТ] Код, назначение, изображение и размер не сверены с официальным текстом.",
+      "backgroundColor": "#CC1E1E",
+      "isExit": false,
+      "primitives": [
+        {
+          "type": "Polygon",
+          "points": [
+            {
+              "x": 0.175,
+              "y": 0.43
+            },
+            {
+              "x": 0.565,
+              "y": 0.43
+            },
+            {
+              "x": 0.565,
+              "y": 0.36
+            },
+            {
+              "x": 0.825,
+              "y": 0.5
+            },
+            {
+              "x": 0.565,
+              "y": 0.64
+            },
+            {
+              "x": 0.565,
+              "y": 0.57
+            },
+            {
+              "x": 0.175,
+              "y": 0.57
+            }
+          ],
+          "fill": "#FFFFFF"
+        }
+      ]
+    },
+    {
+      "code": "F02",
+      "name": "Пожарный кран",
+      "officialDescription": "Пожарный кран",
+      "category": "F",
+      "shape": "Square",
+      "aspectRatio": 1,
+      "minHeightMm": 8,
+      "maxHeightMm": 15,
+      "defaultHeightMm": 10,
+      "gostClauseRef": "[ПРОВЕРИТЬ ПО ТЕКСТУ ГОСТ] Код, назначение, изображение и размер не сверены с официальным текстом.",
+      "backgroundColor": "#CC1E1E",
+      "isExit": false,
+      "primitives": [
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.22,
+              "y": 0.77
+            },
+            {
+              "x": 0.78,
+              "y": 0.77
+            },
+            {
+              "x": 0.78,
+              "y": 0.25
+            },
+            {
+              "x": 0.22,
+              "y": 0.25
+            },
+            {
+              "x": 0.22,
+              "y": 0.77
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.05
+        },
+        {
+          "type": "Circle",
+          "x": 0.5,
+          "y": 0.51,
+          "radius": 0.2,
+          "fill": "#FFFFFF"
+        },
+        {
+          "type": "Circle",
+          "x": 0.5,
+          "y": 0.51,
+          "radius": 0.12,
+          "fill": "#CC1E1E"
+        },
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.5,
+              "y": 0.51
+            },
+            {
+              "x": 0.65,
+              "y": 0.38
+            },
+            {
+              "x": 0.75,
+              "y": 0.35
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.045
+        }
+      ]
+    },
+    {
+      "code": "F03",
+      "name": "Пожарная лестница",
+      "officialDescription": "Пожарная лестница",
+      "category": "F",
+      "shape": "Square",
+      "aspectRatio": 1,
+      "minHeightMm": 8,
+      "maxHeightMm": 15,
+      "defaultHeightMm": 10,
+      "gostClauseRef": "[ПРОВЕРИТЬ ПО ТЕКСТУ ГОСТ] Код, назначение, изображение и размер не сверены с официальным текстом.",
+      "backgroundColor": "#CC1E1E",
+      "isExit": false,
+      "primitives": [
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.3,
+              "y": 0.18
+            },
+            {
+              "x": 0.3,
+              "y": 0.82
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.06
+        },
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.7,
+              "y": 0.18
+            },
+            {
+              "x": 0.7,
+              "y": 0.82
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.06
+        },
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.3,
+              "y": 0.28
+            },
+            {
+              "x": 0.7,
+              "y": 0.28
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.04
+        },
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.3,
+              "y": 0.42
+            },
+            {
+              "x": 0.7,
+              "y": 0.42
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.04
+        },
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.3,
+              "y": 0.56
+            },
+            {
+              "x": 0.7,
+              "y": 0.56
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.04
+        },
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.3,
+              "y": 0.7
+            },
+            {
+              "x": 0.7,
+              "y": 0.7
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.04
+        }
+      ]
+    },
+    {
+      "code": "F04",
+      "name": "Огнетушитель",
+      "officialDescription": "Огнетушитель",
+      "category": "F",
+      "shape": "Square",
+      "aspectRatio": 1,
+      "minHeightMm": 8,
+      "maxHeightMm": 15,
+      "defaultHeightMm": 10,
+      "gostClauseRef": "[ПРОВЕРИТЬ ПО ТЕКСТУ ГОСТ] Код, назначение, изображение и размер не сверены с официальным текстом.",
+      "backgroundColor": "#CC1E1E",
+      "isExit": false,
+      "primitives": [
+        {
+          "type": "Rect",
+          "x": 0.31,
+          "y": 0.21,
+          "width": 0.37,
+          "height": 0.42,
+          "fill": "#FFFFFF"
+        },
+        {
+          "type": "Circle",
+          "x": 0.495,
+          "y": 0.63,
+          "radius": 0.17,
+          "fill": "#FFFFFF"
+        },
+        {
+          "type": "Rect",
+          "x": 0.4,
+          "y": 0.65,
+          "width": 0.18,
+          "height": 0.08,
+          "fill": "#FFFFFF"
+        },
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.49,
+              "y": 0.73
+            },
+            {
+              "x": 0.49,
+              "y": 0.8
+            },
+            {
+              "x": 0.68,
+              "y": 0.8
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.045
+        },
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.44,
+              "y": 0.76
+            },
+            {
+              "x": 0.31,
+              "y": 0.73
+            },
+            {
+              "x": 0.22,
+              "y": 0.58
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.045
+        },
+        {
+          "type": "Rect",
+          "x": 0.4,
+          "y": 0.32,
+          "width": 0.19,
+          "height": 0.035,
+          "fill": "#CC1E1E"
+        }
+      ]
+    },
+    {
+      "code": "F05",
+      "name": "Телефон для использования при пожаре",
+      "officialDescription": "Телефон для использования при пожаре",
+      "category": "F",
+      "shape": "Square",
+      "aspectRatio": 1,
+      "minHeightMm": 8,
+      "maxHeightMm": 15,
+      "defaultHeightMm": 10,
+      "gostClauseRef": "[ПРОВЕРИТЬ ПО ТЕКСТУ ГОСТ] Код, назначение, изображение и размер не сверены с официальным текстом.",
+      "backgroundColor": "#CC1E1E",
+      "isExit": false,
+      "primitives": [
+        {
+          "type": "Polygon",
+          "points": [
+            {
+              "x": 0.2,
+              "y": 0.72
+            },
+            {
+              "x": 0.31,
+              "y": 0.8
+            },
+            {
+              "x": 0.42,
+              "y": 0.63
+            },
+            {
+              "x": 0.35,
+              "y": 0.56
+            },
+            {
+              "x": 0.43,
+              "y": 0.44
+            },
+            {
+              "x": 0.53,
+              "y": 0.36
+            },
+            {
+              "x": 0.6,
+              "y": 0.44
+            },
+            {
+              "x": 0.78,
+              "y": 0.32
+            },
+            {
+              "x": 0.7,
+              "y": 0.2
+            },
+            {
+              "x": 0.6,
+              "y": 0.2
+            },
+            {
+              "x": 0.44,
+              "y": 0.28
+            },
+            {
+              "x": 0.32,
+              "y": 0.4
+            },
+            {
+              "x": 0.22,
+              "y": 0.57
+            }
+          ],
+          "fill": "#FFFFFF"
+        }
+      ]
+    },
+    {
+      "code": "F07",
+      "name": "Пожарный водоисточник / сухотрубный стояк",
+      "officialDescription": "Пожарный водоисточник / сухотрубный стояк",
+      "category": "F",
+      "shape": "Square",
+      "aspectRatio": 1,
+      "minHeightMm": 8,
+      "maxHeightMm": 15,
+      "defaultHeightMm": 10,
+      "gostClauseRef": "[ПРОВЕРИТЬ ПО ТЕКСТУ ГОСТ] Код, назначение, изображение и размер не сверены с официальным текстом.",
+      "backgroundColor": "#CC1E1E",
+      "isExit": false,
+      "primitives": [
+        {
+          "type": "Rect",
+          "x": 0.43,
+          "y": 0.22,
+          "width": 0.14,
+          "height": 0.45,
+          "fill": "#FFFFFF"
+        },
+        {
+          "type": "Rect",
+          "x": 0.26,
+          "y": 0.48,
+          "width": 0.48,
+          "height": 0.12,
+          "fill": "#FFFFFF"
+        },
+        {
+          "type": "Rect",
+          "x": 0.3,
+          "y": 0.63,
+          "width": 0.4,
+          "height": 0.08,
+          "fill": "#FFFFFF"
+        },
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.5,
+              "y": 0.68
+            },
+            {
+              "x": 0.5,
+              "y": 0.8
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.045
+        },
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.36,
+              "y": 0.79
+            },
+            {
+              "x": 0.64,
+              "y": 0.79
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.045
+        },
+        {
+          "type": "Rect",
+          "x": 0.32,
+          "y": 0.19,
+          "width": 0.36,
+          "height": 0.05,
+          "fill": "#FFFFFF"
+        }
+      ]
+    },
+    {
+      "code": "F10",
+      "name": "Кнопка пожарной автоматики",
+      "officialDescription": "Кнопка пожарной автоматики",
+      "category": "F",
+      "shape": "Square",
+      "aspectRatio": 1,
+      "minHeightMm": 8,
+      "maxHeightMm": 15,
+      "defaultHeightMm": 10,
+      "gostClauseRef": "[ПРОВЕРИТЬ ПО ТЕКСТУ ГОСТ] Код, назначение, изображение и размер не сверены с официальным текстом.",
+      "backgroundColor": "#CC1E1E",
+      "isExit": false,
+      "primitives": [
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.19,
+              "y": 0.18
+            },
+            {
+              "x": 0.81,
+              "y": 0.18
+            },
+            {
+              "x": 0.81,
+              "y": 0.82
+            },
+            {
+              "x": 0.19,
+              "y": 0.82
+            },
+            {
+              "x": 0.19,
+              "y": 0.18
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.055
+        },
+        {
+          "type": "Circle",
+          "x": 0.5,
+          "y": 0.51,
+          "radius": 0.19,
+          "fill": "#FFFFFF"
+        },
+        {
+          "type": "Circle",
+          "x": 0.5,
+          "y": 0.51,
+          "radius": 0.1,
+          "fill": "#CC1E1E"
+        },
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.32,
+              "y": 0.26
+            },
+            {
+              "x": 0.68,
+              "y": 0.26
+            }
+          ],
+          "stroke": "#FFFFFF",
+          "strokeWidth": 0.04
+        }
+      ]
+    },
+    {
+      "code": "EC01",
+      "name": "Аптечка первой помощи",
+      "officialDescription": "Аптечка первой помощи",
+      "category": "EC",
+      "shape": "Square",
+      "aspectRatio": 1,
+      "minHeightMm": 8,
+      "maxHeightMm": 15,
+      "defaultHeightMm": 10,
+      "gostClauseRef": "[ПРОВЕРИТЬ ПО ТЕКСТУ ГОСТ] Код, назначение, изображение и размер не сверены с официальным текстом.",
+      "backgroundColor": "#008855",
+      "isExit": false,
+      "primitives": [
+        {
+          "type": "Rect",
+          "x": 0.4,
+          "y": 0.19,
+          "width": 0.2,
+          "height": 0.62,
+          "fill": "#FFFFFF"
+        },
+        {
+          "type": "Rect",
+          "x": 0.19,
+          "y": 0.4,
+          "width": 0.62,
+          "height": 0.2,
+          "fill": "#FFFFFF"
+        }
+      ]
+    },
+    {
+      "code": "P01",
+      "name": "Запрещается курить",
+      "officialDescription": "Запрещается курить",
+      "category": "P",
+      "shape": "CircleSlash",
+      "aspectRatio": 1,
+      "minHeightMm": 8,
+      "maxHeightMm": 15,
+      "defaultHeightMm": 10,
+      "gostClauseRef": "[ПРОВЕРИТЬ ПО ТЕКСТУ ГОСТ] Код, назначение, изображение и размер не сверены с официальным текстом.",
+      "backgroundColor": "#FFFFFF",
+      "isExit": false,
+      "primitives": [
+        {
+          "type": "Rect",
+          "x": 0.22,
+          "y": 0.37,
+          "width": 0.46,
+          "height": 0.08,
+          "fill": "#171717"
+        },
+        {
+          "type": "Rect",
+          "x": 0.7,
+          "y": 0.37,
+          "width": 0.07,
+          "height": 0.08,
+          "fill": "#171717"
+        },
+        {
+          "type": "Polyline",
+          "points": [
+            {
+              "x": 0.61,
+              "y": 0.5
+            },
+            {
+              "x": 0.56,
+              "y": 0.56
+            },
+            {
+              "x": 0.61,
+              "y": 0.63
+            },
+            {
+              "x": 0.58,
+              "y": 0.7
+            }
+          ],
+          "stroke": "#171717",
+          "strokeWidth": 0.025
+        }
+      ]
+    },
+    {
+      "code": "W09",
+      "name": "Опасность поражения электрическим током",
+      "officialDescription": "Опасность поражения электрическим током",
+      "category": "W",
+      "shape": "EquilateralTriangle",
+      "aspectRatio": 1,
+      "minHeightMm": 8,
+      "maxHeightMm": 15,
+      "defaultHeightMm": 10,
+      "gostClauseRef": "[ПРОВЕРИТЬ ПО ТЕКСТУ ГОСТ] Код, назначение, изображение и размер не сверены с официальным текстом.",
+      "backgroundColor": "#FFDF00",
+      "isExit": false,
+      "primitives": [
+        {
+          "type": "Polygon",
+          "points": [
+            {
+              "x": 0.55,
+              "y": 0.8
+            },
+            {
+              "x": 0.31,
+              "y": 0.45
+            },
+            {
+              "x": 0.46,
+              "y": 0.45
+            },
+            {
+              "x": 0.36,
+              "y": 0.19
+            },
+            {
+              "x": 0.7,
+              "y": 0.57
+            },
+            {
+              "x": 0.53,
+              "y": 0.57
+            }
+          ],
+          "fill": "#171717"
+        }
+      ]
+    }
+  ]
+}

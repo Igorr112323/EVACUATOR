@@ -1,0 +1,17 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="Evakuator.UI.App"
+             RequestedThemeVariant="Light">
+  <Application.Styles>
+    <FluentTheme />
+    <Style Selector="TextBlock">
+      <Setter Property="Foreground" Value="#19332E" />
+      <Setter Property="FontFamily" Value="sans-serif" />
+    </Style>
+    <Style Selector="TextBlock.muted"><Setter Property="Foreground" Value="#748A82" /></Style>
+    <Style Selector="TextBlock.eyebrow"><Setter Property="Foreground" Value="#728A81"/><Setter Property="FontSize" Value="10"/><Setter Property="FontWeight" Value="SemiBold"/></Style>
+    <Style Selector="Button.primary"><Setter Property="Background" Value="#087D5B"/><Setter Property="Foreground" Value="White"/><Setter Property="CornerRadius" Value="8"/><Setter Property="Padding" Value="15,9"/><Setter Property="FontWeight" Value="SemiBold"/></Style>
+    <Style Selector="Button.subtle"><Setter Property="Background" Value="#EEF4F1"/><Setter Property="Foreground" Value="#305B4C"/><Setter Property="CornerRadius" Value="8"/><Setter Property="Padding" Value="12,8"/></Style>
+    <Style Selector="Border.card"><Setter Property="Background" Value="White"/><Setter Property="CornerRadius" Value="10"/><Setter Property="BorderBrush" Value="#E2EBE7"/><Setter Property="BorderThickness" Value="1"/></Style>
+  </Application.Styles>
+</Application>
